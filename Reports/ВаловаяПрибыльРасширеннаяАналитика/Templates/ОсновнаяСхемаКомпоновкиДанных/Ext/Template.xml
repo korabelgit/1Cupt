@@ -1,0 +1,3414 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetUnion">
+		<name>ВаловаяПрибыль</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодДень</dataPath>
+			<field>ПериодДень</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>День</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>5</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодПолугодие</dataPath>
+			<field>ПериодПолугодие</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полугодие</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>10</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодМесяц</dataPath>
+			<field>ПериодМесяц</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>8</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодКвартал</dataPath>
+			<field>ПериодКвартал</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Квартал</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>9</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистратор</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодДекада</dataPath>
+			<field>ПериодДекада</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декада</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>7</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодНеделя</dataPath>
+			<field>ПериодНеделя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неделя</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>6</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодГод</dataPath>
+			<field>ПериодГод</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Год</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>11</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаВидаУчета</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаУчетаЗатрат</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика номенклатуры</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаУчетаЗатрат</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>АналитикаВидаУчета</dcscom:parentDimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВаловаяПрибыль</dataPath>
+			<field>ВаловаяПрибыль</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валовая прибыль</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор контрагента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорПокупателя</dataPath>
+			<field>ДоговорПокупателя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор покупателя</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПродажи</dataPath>
+			<field>ДокументПродажи</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ продажи</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказПокупателя</dataPath>
+			<field>ЗаказПокупателя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ покупателя</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=3</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НДС</dataPath>
+			<field>НДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДС</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Покупатель</dataPath>
+			<field>Покупатель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Покупатель</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проект</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Себестоимость</dataPath>
+			<field>Себестоимость</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Себестоимость</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Стоимость</dataPath>
+			<field>Стоимость</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость с НДС</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьБезНДС</dataPath>
+			<field>СтоимостьБезНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость без НДС</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаВидаУчета</dataPath>
+			<field>АналитикаВидаУчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика вида учета</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаНоменклатуры</dataPath>
+			<field>АналитикаУчетаНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика учета номенклатуры</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаПартий</dataPath>
+			<field>АналитикаУчетаПартий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика учета партий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НалоговоеНазначение</dataPath>
+			<field>НалоговоеНазначение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Налоговое назначение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтавкаНДС</dataPath>
+			<field>СтавкаНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ставка НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СхемаРеализации</dataPath>
+			<field>СхемаРеализации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Схема реализации</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Рентабельность</dataPath>
+			<field>Рентабельность</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рентабельность, %</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Эффективность</dataPath>
+			<field>Эффективность</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Эффективность, %</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВаловаяПрибыльЕд</dataPath>
+			<field>ВаловаяПрибыльЕд</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валовая прибыль (за ед.)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СебестоимостьЕд</dataPath>
+			<field>СебестоимостьЕд</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Себестоимость (за ед.)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьБезНДСЕд</dataPath>
+			<field>СтоимостьБезНДСЕд</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость без НДС (за ед.)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьЕд</dataPath>
+			<field>СтоимостьЕд</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость с НДС (за ед.)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<item xsi:type="DataSetQuery">
+			<name>ВаловаяПрибыльУпр</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодДень</dataPath>
+				<field>ПериодДень</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период день</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>2</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодПолугодие</dataPath>
+				<field>ПериодПолугодие</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период полугодие</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>7</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодМесяц</dataPath>
+				<field>ПериодМесяц</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период месяц</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>5</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодКвартал</dataPath>
+				<field>ПериодКвартал</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период квартал</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>6</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Регистратор</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодДекада</dataPath>
+				<field>ПериодДекада</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период декада</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>4</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодНеделя</dataPath>
+				<field>ПериодНеделя</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период неделя</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>3</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодГод</dataPath>
+				<field>ПериодГод</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период год</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:periodNumber>8</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Организация</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Номенклатура</dataPath>
+				<field>Номенклатура</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Номенклатура</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ХарактеристикаНоменклатуры</dataPath>
+				<field>ХарактеристикаНоменклатуры</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Характеристика номенклатуры</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подразделение</v8:content>
+					</v8:item>
+				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВаловаяПрибыль</dataPath>
+				<field>ВаловаяПрибыль</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДоговорКонтрагента</dataPath>
+				<field>ДоговорКонтрагента</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДоговорПокупателя</dataPath>
+				<field>ДоговорПокупателя</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДокументПродажи</dataPath>
+				<field>ДокументПродажи</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ЗаказПокупателя</dataPath>
+				<field>ЗаказПокупателя</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Количество</dataPath>
+				<field>Количество</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Контрагент</dataPath>
+				<field>Контрагент</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НДС</dataPath>
+				<field>НДС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Покупатель</dataPath>
+				<field>Покупатель</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Проект</dataPath>
+				<field>Проект</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Себестоимость</dataPath>
+				<field>Себестоимость</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Стоимость</dataPath>
+				<field>Стоимость</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьБезНДС</dataPath>
+				<field>СтоимостьБезНДС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Рентабельность</dataPath>
+				<field>Рентабельность</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Эффективность</dataPath>
+				<field>Эффективность</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВаловаяПрибыльЕд</dataPath>
+				<field>ВаловаяПрибыльЕд</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СебестоимостьЕд</dataPath>
+				<field>СебестоимостьЕд</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьБезНДСЕд</dataPath>
+				<field>СтоимостьБезНДСЕд</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьЕд</dataPath>
+				<field>СтоимостьЕд</field>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	АналитикаВидаУчета.Ссылка КАК АналитикаВидаУчета,
+	АналитикаВидаУчета.Организация
+ПОМЕСТИТЬ 
+	АналитикаВидаУчетаТовары
+ИЗ
+	РегистрСведений.АналитикаВидаУчета КАК АналитикаВидаУчета
+ГДЕ
+	(АналитикаВидаУчета.РазделУчета = ЗНАЧЕНИЕ(Перечисление.РазделыУчета.МПЗ)
+			ИЛИ АналитикаВидаУчета.РазделУчета = ЗНАЧЕНИЕ(Перечисление.РазделыУчета.ТоварыОтгруженные))
+;
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	АналитикаВидаУчета.Ссылка КАК АналитикаВидаУчета,
+	АналитикаВидаУчета.Организация
+ПОМЕСТИТЬ 
+	АналитикаВидаУчетаВыпуск
+ИЗ
+	РегистрСведений.АналитикаВидаУчета КАК АналитикаВидаУчета
+ГДЕ
+	АналитикаВидаУчета.РазделУчета = ЗНАЧЕНИЕ(Перечисление.РазделыУчета.Выпуск)
+;
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	АналитикаУчетаЗатрат.Ссылка КАК АналитикаУчетаЗатрат,
+	АналитикаУчетаЗатрат.Затрата,
+	АналитикаУчетаЗатрат.ХарактеристикаЗатраты
+ПОМЕСТИТЬ 
+	АналитикаУчетаЗатратТовары
+ИЗ
+	РегистрСведений.АналитикаУчетаЗатрат КАК АналитикаУчетаЗатрат
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ 
+			РегистрНакопления.Продажи.Обороты(
+				&amp;НачалоПериода, 
+				&amp;КонецПериода,
+				,
+				&amp;ВидУчета = 0
+			) КАК ПродажиОбороты
+		ПО АналитикаУчетаЗатрат.Затрата = ПродажиОбороты.Номенклатура
+		И (ВЫБОР КОГДА &amp;НастройкаАналитикиХарактеристикаЗатратыУправленческийУчет
+			     ТОГДА АналитикаУчетаЗатрат.ХарактеристикаЗатраты = ПродажиОбороты.ХарактеристикаНоменклатуры
+			     ИНАЧЕ Истина
+		   КОНЕЦ)
+		И (ПродажиОбороты.Номенклатура.ВидНоменклатуры.ТипНоменклатуры &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ТипыНоменклатуры.Услуга))
+;
+////////////////////////////////////////////////////////////////////////////////	
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	РегистрАналитикаРаспределенияЗатрат.Ссылка КАК АналитикаРаспределенияЗатрат,
+	РегистрАналитикаРаспределенияЗатрат.Продукция,
+	РегистрАналитикаРаспределенияЗатрат.ХарактеристикаПродукции
+ПОМЕСТИТЬ 
+	АналитикаРаспределенияЗатратУслуги
+ИЗ
+	РегистрСведений.АналитикаРаспределенияЗатрат КАК РегистрАналитикаРаспределенияЗатрат
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ 
+			РегистрНакопления.УчетЗатрат КАК УчетЗатрат
+		ПО (УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииВыпускУслуги))
+			И (УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход))
+			И (УчетЗатрат.Активность)
+			И (УчетЗатрат.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода)
+			И РегистрАналитикаРаспределенияЗатрат.Ссылка = УчетЗатрат.АналитикаРаспределенияЗатрат
+			И (РегистрАналитикаРаспределенияЗатрат.Продукция.ВидНоменклатуры.ТипНоменклатуры = ЗНАЧЕНИЕ(Перечисление.ТипыНоменклатуры.Услуга))
+;
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	АналитикаВидаУчетаТовары.Организация,
+	АналитикаУчетаЗатратТовары.Затрата КАК Номенклатура,
+	АналитикаУчетаЗатратТовары.ХарактеристикаЗатраты КАК ХарактеристикаНоменклатуры,
+	ВЫБОР
+		КОГДА СУММА(УчетЗатратТовары.Количество) = 0
+			ТОГДА 0
+		ИНАЧЕ СУММА(УчетЗатратТовары.Стоимость) / СУММА(УчетЗатратТовары.Количество)
+	КОНЕЦ КАК Цена,
+	НАЧАЛОПЕРИОДА(УчетЗатратТовары.Период, МЕСЯЦ) КАК ПериодМесяц
+ПОМЕСТИТЬ 
+	СебестоимостьПродаж
+ИЗ
+	(ВЫБРАТЬ
+		УчетЗатрат.АналитикаВидаУчета КАК АналитикаВидаУчета,
+		УчетЗатрат.АналитикаУчетаЗатрат КАК АналитикаУчетаЗатрат,
+		СУММА(ВЫБОР
+				КОГДА УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+						И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииРеализации)
+					ТОГДА УчетЗатрат.Количество
+				ИНАЧЕ ВЫБОР
+						КОГДА УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+								И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииВозвратТовараОтПокупателя)
+							ТОГДА -1 * УчетЗатрат.Количество
+					КОНЕЦ
+			КОНЕЦ) КАК Количество,
+		СУММА(ВЫБОР
+				КОГДА УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+						И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииРеализации)
+					ТОГДА УчетЗатрат.Стоимость
+				ИНАЧЕ ВЫБОР
+						КОГДА УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+								И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииВозвратТовараОтПокупателя)
+							ТОГДА -1 * УчетЗатрат.Стоимость
+					КОНЕЦ
+			КОНЕЦ) КАК Стоимость,
+		УчетЗатрат.Период КАК Период
+	ИЗ
+		РегистрНакопления.УчетЗатрат КАК УчетЗатрат
+	ГДЕ
+		УчетЗатрат.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И УчетЗатрат.Активность
+		И УчетЗатрат.АналитикаВидаУчета В
+			(ВЫБРАТЬ
+				АналитикаВидаУчетаТовары.АналитикаВидаУчета
+			 ИЗ
+				АналитикаВидаУчетаТовары КАК АналитикаВидаУчетаТовары)
+		И УчетЗатрат.АналитикаУчетаЗатрат В
+			(ВЫБРАТЬ
+				АналитикаУчетаЗатратТовары.АналитикаУчетаЗатрат
+			 ИЗ
+				АналитикаУчетаЗатратТовары КАК АналитикаУчетаЗатратТовары)
+		И (УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+				И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииРеализации)
+			ИЛИ УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+				И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииВозвратТовараОтПокупателя))
+	
+	СГРУППИРОВАТЬ ПО
+		УчетЗатрат.АналитикаВидаУчета,
+		УчетЗатрат.АналитикаУчетаЗатрат,
+		УчетЗатрат.Период
+	) КАК УчетЗатратТовары
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ 
+		АналитикаВидаУчетаТовары КАК АналитикаВидаУчетаТовары
+		ПО УчетЗатратТовары.АналитикаВидаУчета = АналитикаВидаУчетаТовары.АналитикаВидаУчета
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ 
+		АналитикаУчетаЗатратТовары КАК АналитикаУчетаЗатратТовары
+		ПО УчетЗатратТовары.АналитикаУчетаЗатрат = АналитикаУчетаЗатратТовары.АналитикаУчетаЗатрат
+
+СГРУППИРОВАТЬ ПО
+	НАЧАЛОПЕРИОДА(УчетЗатратТовары.Период, МЕСЯЦ),
+	АналитикаВидаУчетаТовары.Организация,
+	АналитикаУчетаЗатратТовары.Затрата,
+	АналитикаУчетаЗатратТовары.ХарактеристикаЗатраты
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	АналитикаВидаУчетаВыпуск.Организация,
+	АналитикаРаспределенияЗатратУслуги.Продукция,
+	АналитикаРаспределенияЗатратУслуги.ХарактеристикаПродукции,
+	ВЫБОР
+		КОГДА СУММА(УчетЗатратУслуги.Количество) = 0
+			ТОГДА 0
+		ИНАЧЕ СУММА(УчетЗатратУслуги.Стоимость) / СУММА(УчетЗатратУслуги.Количество)
+	КОНЕЦ,
+	НАЧАЛОПЕРИОДА(УчетЗатратУслуги.Период, МЕСЯЦ)
+ИЗ
+	(ВЫБРАТЬ
+		УчетЗатрат.Период КАК Период,
+		УчетЗатрат.АналитикаВидаУчета КАК АналитикаВидаУчета,
+		УчетЗатрат.АналитикаРаспределенияЗатрат КАК АналитикаРаспределенияЗатрат,
+		СУММА(ВЫБОР
+				КОГДА УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+						И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииВыпускУслуги)
+					ТОГДА УчетЗатрат.Количество
+				ИНАЧЕ 0
+			КОНЕЦ) КАК Количество,
+		СУММА(ВЫБОР
+				КОГДА УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+						И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииВыпускУслуги)
+					ТОГДА УчетЗатрат.Стоимость
+				ИНАЧЕ 0
+			КОНЕЦ) КАК Стоимость
+	ИЗ
+		РегистрНакопления.УчетЗатрат КАК УчетЗатрат
+	ГДЕ
+		УчетЗатрат.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И УчетЗатрат.Активность
+		И УчетЗатрат.АналитикаВидаУчета В
+				(ВЫБРАТЬ
+					АналитикаВидаУчетаВыпуск.АналитикаВидаУчета
+				ИЗ
+					АналитикаВидаУчетаВыпуск КАК АналитикаВидаУчетаВыпуск)
+		И УчетЗатрат.АналитикаРаспределенияЗатрат В
+				(ВЫБРАТЬ
+					АналитикаРаспределенияЗатратУслуги.АналитикаРаспределенияЗатрат
+				ИЗ
+					АналитикаРаспределенияЗатратУслуги КАК АналитикаРаспределенияЗатратУслуги)
+		И УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+				И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииВыпускУслуги)
+	
+	СГРУППИРОВАТЬ ПО
+		УчетЗатрат.Период,
+		УчетЗатрат.АналитикаВидаУчета,
+		УчетЗатрат.АналитикаРаспределенияЗатрат
+	) КАК УчетЗатратУслуги
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ 
+		АналитикаВидаУчетаВыпуск КАК АналитикаВидаУчетаВыпуск
+		ПО УчетЗатратУслуги.АналитикаВидаУчета = АналитикаВидаУчетаВыпуск.АналитикаВидаУчета
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ 
+		АналитикаРаспределенияЗатратУслуги КАК АналитикаРаспределенияЗатратУслуги
+		ПО УчетЗатратУслуги.АналитикаРаспределенияЗатрат = АналитикаРаспределенияЗатратУслуги.АналитикаРаспределенияЗатрат
+
+СГРУППИРОВАТЬ ПО
+	НАЧАЛОПЕРИОДА(УчетЗатратУслуги.Период, МЕСЯЦ),
+	АналитикаВидаУчетаВыпуск.Организация,
+	АналитикаРаспределенияЗатратУслуги.Продукция,
+	АналитикаРаспределенияЗатратУслуги.ХарактеристикаПродукции
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	ХарактеристикаНоменклатуры,
+	ПериодМесяц
+;
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ 
+	
+	ПродажиОбороты.Организация КАК Организация,
+	
+	ПродажиОбороты.Номенклатура               КАК Номенклатура,
+	ПродажиОбороты.ХарактеристикаНоменклатуры КАК ХарактеристикаНоменклатуры,
+	
+	ПродажиОбороты.Контрагент         КАК Покупатель,
+	ПродажиОбороты.ДоговорКонтрагента КАК ДоговорПокупателя,
+	ПродажиОбороты.ЗаказПокупателя    КАК ЗаказПокупателя,
+	ПродажиОбороты.ДокументПродажи    КАК ДокументПродажи,
+	
+	ПродажиОбороты.Проект        КАК Проект,
+	ПродажиОбороты.Подразделение КАК Подразделение,
+	
+	ПродажиОбороты.Регистратор     КАК Регистратор,
+	ПродажиОбороты.ПериодДень      КАК ПериодДень,
+	ПродажиОбороты.ПериодНеделя    КАК ПериодНеделя,
+	ПродажиОбороты.ПериодДекада    КАК ПериодДекада,
+	ПродажиОбороты.ПериодМесяц     КАК ПериодМесяц,
+	ПродажиОбороты.ПериодКвартал   КАК ПериодКвартал,
+	ПродажиОбороты.ПериодПолугодие КАК ПериодПолугодие,
+	ПродажиОбороты.ПериодГод       КАК ПериодГод,
+	
+	ВЫБОР
+		КОГДА &amp;ЕдиницыКоличестваВОтчете = 0
+			ТОГДА ПродажиОбороты.КоличествоОборот
+		КОГДА &amp;ЕдиницыКоличестваВОтчете = 1
+			ТОГДА ПродажиОбороты.КоличествоОборот * ЕСТЬNULL(ПродажиОбороты.Номенклатура.ЕдиницаХраненияОстатков.Коэффициент, 1)
+		ИНАЧЕ ПродажиОбороты.КоличествоОборот * ЕСТЬNULL(ПродажиОбороты.Номенклатура.ЕдиницаХраненияОстатков.Коэффициент, 1) / ЕСТЬNULL(ПродажиОбороты.Номенклатура.ЕдиницаДляОтчетов.Коэффициент, 1)
+	КОНЕЦ КАК Количество,
+	
+	ПродажиОбороты.СтоимостьОборот - ПродажиОбороты.НДСОборот КАК СтоимостьБезНДС,
+	ПродажиОбороты.НДСОборот КАК НДС,
+	ПродажиОбороты.СтоимостьОборот КАК Стоимость,
+	
+	ПродажиОбороты.КоличествоОборот КАК КоличествоОборот
+	
+ПОМЕСТИТЬ 
+	СтоимостьПродаж 		
+	
+ИЗ
+	РегистрНакопления.Продажи.Обороты(
+		&amp;НачалоПериода, 
+		&amp;КонецПериода, 
+		Авто, 
+		&amp;ВидУчета = 0
+	) КАК ПродажиОбороты
+;
+////////////////////////////////////////////////////////////////////////////////
+// Курсы валюты управленческого учета по месяцам на конец месяца
+//
+ВЫБРАТЬ 
+    КурсыВалютСрезПоследнихПоМесяцам.ПериодМесяц,
+    
+	ВЫБОР КОГДА &amp;ВалютаОтчета = 1 
+		ТОГДА
+			ВЫБОР КОГДА КурсыВалют.Курс = 0 
+				ТОГДА
+					1
+				ИНАЧЕ
+					КурсыВалют.Курс 
+			КОНЕЦ  / 
+			ВЫБОР КОГДА КурсыВалют.Кратность = 0 
+				ТОГДА
+					1
+				ИНАЧЕ
+					КурсыВалют.Кратность 
+			КОНЕЦ
+	ИНАЧЕ
+		1
+	КОНЕЦ КАК Курс	 
+	
+ПОМЕСТИТЬ 
+	КурсыВалютыУправленческогоУчета
+	
+ИЗ
+	(ВЫБРАТЬ
+	    СтоимостьПродаж.ПериодМесяц КАК ПериодМесяц, 
+		МАКСИМУМ(КурсыВалютВМесяце.Период) КАК ДатаКурса
+	 ИЗ
+		СтоимостьПродаж КАК СтоимостьПродаж
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют КАК КурсыВалютВМесяце
+      		ПО КурсыВалютВМесяце.Период &lt;= КОНЕЦПЕРИОДА(СтоимостьПродаж.ПериодМесяц, МЕСЯЦ)
+      		И  КурсыВалютВМесяце.Валюта = &amp;ВалютаУправленческогоУчета
+	 СГРУППИРОВАТЬ ПО
+	 	СтоимостьПродаж.ПериодМесяц
+    ) КАК КурсыВалютСрезПоследнихПоМесяцам
+    
+    ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют КАК КурсыВалют
+    ПО КурсыВалютСрезПоследнихПоМесяцам.ДатаКурса = КурсыВалют.Период И КурсыВалют.Валюта = &amp;ВалютаУправленческогоУчета
+;
+////////////////////////////////////////////////////////////////////////////////
+// Результирующий 
+//
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	
+	ПродажиОбороты.Организация КАК Организация,
+	
+	ПродажиОбороты.Номенклатура               КАК Номенклатура,
+	ПродажиОбороты.ХарактеристикаНоменклатуры КАК ХарактеристикаНоменклатуры,
+	
+	ПродажиОбороты.Покупатель         КАК Покупатель,
+	ПродажиОбороты.ДоговорПокупателя  КАК ДоговорПокупателя,
+	ПродажиОбороты.ЗаказПокупателя    КАК ЗаказПокупателя,
+	ПродажиОбороты.ДокументПродажи    КАК ДокументПродажи,
+	
+	ПродажиОбороты.Проект        КАК Проект,
+	ПродажиОбороты.Подразделение КАК Подразделение,
+	
+	ПродажиОбороты.Регистратор     КАК Регистратор,
+	ПродажиОбороты.ПериодДень      КАК ПериодДень,
+	ПродажиОбороты.ПериодНеделя    КАК ПериодНеделя,
+	ПродажиОбороты.ПериодДекада    КАК ПериодДекада,
+	ПродажиОбороты.ПериодМесяц     КАК ПериодМесяц,
+	ПродажиОбороты.ПериодКвартал   КАК ПериодКвартал,
+	ПродажиОбороты.ПериодПолугодие КАК ПериодПолугодие,
+	ПродажиОбороты.ПериодГод       КАК ПериодГод,
+	
+	ПродажиОбороты.Количество КАК Количество,
+	
+	ПродажиОбороты.СтоимостьБезНДС * КурсВалютыУправленческогоУчета.Курс КАК СтоимостьБезНДС,
+	ПродажиОбороты.НДС * КурсВалютыУправленческогоУчета.Курс             КАК НДС,
+	ПродажиОбороты.Стоимость * КурсВалютыУправленческогоУчета.Курс       КАК Стоимость,
+	
+	ПродажиОбороты.КоличествоОборот * ЕСТЬNULL(ТаблицаРегистраПродажиСебестоимость.Цена, 0)  * КурсВалютыУправленческогоУчета.Курс КАК Себестоимость,
+	
+	ВЫБОР
+		КОГДА &amp;НеВключатьНДСВСтоимостьПартий
+			ТОГДА ПродажиОбороты.СтоимостьБезНДС * КурсВалютыУправленческогоУчета.Курс
+		ИНАЧЕ ПродажиОбороты.Стоимость * КурсВалютыУправленческогоУчета.Курс
+	КОНЕЦ - (ПродажиОбороты.КоличествоОборот * ЕСТЬNULL(ТаблицаРегистраПродажиСебестоимость.Цена, 0) * КурсВалютыУправленческогоУчета.Курс) КАК ВаловаяПрибыль,
+	
+	// рассчитываются на закладке "Ресурсы" 
+	0 КАК СтоимостьЕд,
+	0 КАК СтоимостьБезНДСЕд,
+	0 КАК СебестоимостьЕд,
+	0 КАК ВаловаяПрибыльЕд,
+	0 КАК Эффективность,
+	0 КАК Рентабельность
+	
+ИЗ
+	СтоимостьПродаж КАК ПродажиОбороты
+	
+	ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+		СебестоимостьПродаж.Номенклатура КАК Номенклатура,
+		СебестоимостьПродаж.ХарактеристикаНоменклатуры КАК ХарактеристикаНоменклатуры,
+		СебестоимостьПродаж.Цена КАК Цена,
+		СебестоимостьПродаж.Организация КАК Организация,
+		СебестоимостьПродаж.ПериодМесяц КАК ПериодМесяц
+	ИЗ
+		СебестоимостьПродаж КАК СебестоимостьПродаж
+	) КАК ТаблицаРегистраПродажиСебестоимость
+	ПО (ТаблицаРегистраПродажиСебестоимость.Номенклатура = ПродажиОбороты.Номенклатура)
+		И (ВЫБОР КОГДА &amp;НастройкаАналитикиХарактеристикаЗатратыУправленческийУчет
+			     ТОГДА ТаблицаРегистраПродажиСебестоимость.ХарактеристикаНоменклатуры = ПродажиОбороты.ХарактеристикаНоменклатуры
+			     ИНАЧЕ Истина
+		   КОНЕЦ)
+		И (ВЫБОР КОГДА &amp;НастройкаАналитикиОрганизацияУправленческийУчет
+			     ТОГДА ПродажиОбороты.Организация = ТаблицаРегистраПродажиСебестоимость.Организация
+			     ИНАЧЕ Истина
+		   КОНЕЦ)
+		И (ПродажиОбороты.ПериодМесяц = ТаблицаРегистраПродажиСебестоимость.ПериодМесяц)
+	
+	{ЛЕВОЕ СОЕДИНЕНИЕ 
+	 	КурсыВалютыУправленческогоУчета КАК КурсВалютыУправленческогоУчета
+		ПО ПродажиОбороты.ПериодМесяц = КурсВалютыУправленческогоУчета.ПериодМесяц
+	}	
+
+ГДЕ
+	ПродажиОбороты.КоличествоОборот &lt;&gt; 0
+	ИЛИ ПродажиОбороты.Стоимость &lt;&gt; 0
+
+////////////////////////////////////////////////////////////////////////////////
+// ХАРАКТЕРИСТИКИ
+//
+
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ХарактеристикиНоменклатуры)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ХарактеристикиНоменклатуры))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ХарактеристикиНоменклатуры)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ХарактеристикиНоменклатуры))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.КонтактныеЛицаКонтрагентов)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_КонтактныеЛицаКонтрагентов))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.КонтактныеЛицаКонтрагентов)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_КонтактныеЛицаКонтрагентов))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.КонтактныеЛица)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_КонтактныеЛица))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.КонтактныеЛица)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_КонтактныеЛица))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Контрагенты)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Контрагенты))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Контрагенты)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Контрагенты))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Номенклатура)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Номенклатура))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Номенклатура)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Номенклатура))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ОсновныеСредства)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ОсновныеСредства))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ОсновныеСредства)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ОсновныеСредства))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Подразделения)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Подразделения))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Подразделения)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Подразделения))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Проекты)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Проекты))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Проекты)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Проекты))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Склады)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Склады))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Склады)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Склады))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ФизическиеЛица)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ФизическиеЛица))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ФизическиеЛица)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ФизическиеЛица))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Документ)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Документы))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Документ)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Документы))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ДоговорыКонтрагентов)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ДоговорыКонтрагентов))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ДоговорыКонтрагентов)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ДоговорыКонтрагентов))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+			
+</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ВаловаяПрибыльРегл</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВаловаяПрибыль</dataPath>
+				<field>ВаловаяПрибыль</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДоговорПокупателя</dataPath>
+				<field>ДоговорПокупателя</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ЗаказПокупателя</dataPath>
+				<field>ЗаказПокупателя</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Количество</dataPath>
+				<field>Количество</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НДС</dataPath>
+				<field>НДС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Номенклатура</dataPath>
+				<field>Номенклатура</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодГод</dataPath>
+				<field>ПериодГод</field>
+				<role>
+					<dcscom:periodNumber>9</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодДекада</dataPath>
+				<field>ПериодДекада</field>
+				<role>
+					<dcscom:periodNumber>5</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодДень</dataPath>
+				<field>ПериодДень</field>
+				<role>
+					<dcscom:periodNumber>3</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодКвартал</dataPath>
+				<field>ПериодКвартал</field>
+				<role>
+					<dcscom:periodNumber>7</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодМесяц</dataPath>
+				<field>ПериодМесяц</field>
+				<role>
+					<dcscom:periodNumber>6</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодНеделя</dataPath>
+				<field>ПериодНеделя</field>
+				<role>
+					<dcscom:periodNumber>4</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодПолугодие</dataPath>
+				<field>ПериодПолугодие</field>
+				<role>
+					<dcscom:periodNumber>8</dcscom:periodNumber>
+					<dcscom:periodType>Additional</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Покупатель</dataPath>
+				<field>Покупатель</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<dcscom:periodNumber>2</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Себестоимость</dataPath>
+				<field>Себестоимость</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Стоимость</dataPath>
+				<field>Стоимость</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьБезНДС</dataPath>
+				<field>СтоимостьБезНДС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ХарактеристикаНоменклатуры</dataPath>
+				<field>ХарактеристикаНоменклатуры</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>АналитикаВидаУчета</dataPath>
+				<field>АналитикаВидаУчета</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>АналитикаУчетаНоменклатуры</dataPath>
+				<field>АналитикаУчетаНоменклатуры</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>АналитикаУчетаПартий</dataPath>
+				<field>АналитикаУчетаПартий</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НалоговоеНазначение</dataPath>
+				<field>НалоговоеНазначение</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтавкаНДС</dataPath>
+				<field>СтавкаНДС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СхемаРеализации</dataPath>
+				<field>СхемаРеализации</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Рентабельность</dataPath>
+				<field>Рентабельность</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Эффективность</dataPath>
+				<field>Эффективность</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВаловаяПрибыльЕд</dataPath>
+				<field>ВаловаяПрибыльЕд</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СебестоимостьЕд</dataPath>
+				<field>СебестоимостьЕд</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьБезНДСЕд</dataPath>
+				<field>СтоимостьБезНДСЕд</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтоимостьЕд</dataPath>
+				<field>СтоимостьЕд</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДокументПродажи</dataPath>
+				<field>ДокументПродажи</field>
+				<role>
+					<dcscom:periodNumber>1</dcscom:periodNumber>
+					<dcscom:periodType>Main</dcscom:periodType>
+				</role>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	АналитикаВидаУчета.Ссылка КАК АналитикаВидаУчета,
+	АналитикаВидаУчета.Организация
+ПОМЕСТИТЬ 
+	АналитикаВидаУчетаТовары
+ИЗ
+	РегистрСведений.АналитикаВидаУчета КАК АналитикаВидаУчета
+ГДЕ
+	(АналитикаВидаУчета.РазделУчета = ЗНАЧЕНИЕ(Перечисление.РазделыУчета.МПЗ)
+			ИЛИ АналитикаВидаУчета.РазделУчета = ЗНАЧЕНИЕ(Перечисление.РазделыУчета.ТоварыОтгруженные))
+;
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	АналитикаВидаУчета.Ссылка КАК АналитикаВидаУчета,
+	АналитикаВидаУчета.Организация
+ПОМЕСТИТЬ 
+	АналитикаВидаУчетаВыпуск
+ИЗ
+	РегистрСведений.АналитикаВидаУчета КАК АналитикаВидаУчета
+ГДЕ
+	АналитикаВидаУчета.РазделУчета = ЗНАЧЕНИЕ(Перечисление.РазделыУчета.Выпуск)
+;
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	АналитикаРаспределенияЗатрат.Ссылка КАК АналитикаРаспределенияЗатрат,
+	АналитикаРаспределенияЗатрат.Продукция,
+	АналитикаРаспределенияЗатрат.ХарактеристикаПродукции
+ПОМЕСТИТЬ 
+	АналитикаРаспределенияЗатратТовары
+ИЗ
+	РегистрСведений.АналитикаРаспределенияЗатрат КАК АналитикаРаспределенияЗатрат
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ 
+			РегистрНакопления.УчетПродажИСебестоимости.Обороты(
+				&amp;НачалоПериода, 
+				&amp;КонецПериода,
+				,
+				&amp;ВидУчета = 1
+			) КАК ПродажиОбороты	
+		ПО АналитикаРаспределенияЗатрат.Ссылка = ПродажиОбороты.АналитикаУчетаНоменклатуры
+		И (АналитикаРаспределенияЗатрат.Продукция.ВидНоменклатуры.ТипНоменклатуры &lt;&gt; ЗНАЧЕНИЕ(Перечисление.ТипыНоменклатуры.Услуга))
+;
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	АналитикаУчетаЗатрат.Ссылка КАК АналитикаУчетаЗатрат,
+	АналитикаУчетаЗатрат.Затрата,
+	АналитикаУчетаЗатрат.ХарактеристикаЗатраты
+ПОМЕСТИТЬ 
+	АналитикаУчетаЗатратТовары
+ИЗ
+	РегистрСведений.АналитикаУчетаЗатрат КАК АналитикаУчетаЗатрат
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ 
+			АналитикаРаспределенияЗатратТовары КАК АналитикаРаспределенияЗатратТовары
+		ПО АналитикаУчетаЗатрат.Затрата = АналитикаРаспределенияЗатратТовары.Продукция
+		   И (ВЫБОР КОГДА (&amp;НастройкаАналитикиХарактеристикаЗатратыРегламентированныйУчет И &amp;НастройкаАналитикиХарактеристикаПродукцииРегламентированныйУчет)
+				ТОГДА АналитикаУчетаЗатрат.ХарактеристикаЗатраты = АналитикаРаспределенияЗатратТовары.ХарактеристикаПродукции
+				ИНАЧЕ Истина
+			 КОНЕЦ)
+;
+////////////////////////////////////////////////////////////////////////////////	
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	РегистрАналитикаРаспределенияЗатрат.Ссылка КАК АналитикаРаспределенияЗатрат,
+	РегистрАналитикаРаспределенияЗатрат.Продукция,
+	РегистрАналитикаРаспределенияЗатрат.ХарактеристикаПродукции
+ПОМЕСТИТЬ 
+	АналитикаРаспределенияЗатратУслуги
+ИЗ
+	РегистрСведений.АналитикаРаспределенияЗатрат КАК РегистрАналитикаРаспределенияЗатрат
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ 
+			РегистрНакопления.УчетЗатратРегл КАК УчетЗатрат
+		ПО (УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииВыпускУслуги))
+			И (УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход))
+			И (УчетЗатрат.Активность)
+			И (УчетЗатрат.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода)
+			И РегистрАналитикаРаспределенияЗатрат.Ссылка = УчетЗатрат.АналитикаРаспределенияЗатрат
+			И (РегистрАналитикаРаспределенияЗатрат.Продукция.ВидНоменклатуры.ТипНоменклатуры = ЗНАЧЕНИЕ(Перечисление.ТипыНоменклатуры.Услуга))
+;
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+    АналитикаВидаУчетаТовары.АналитикаВидаУчета КАК АналитикаВидаУчета,
+    АналитикаУчетаЗатратТовары.АналитикаУчетаЗатрат КАК АналитикаУчетаЗатрат,
+	АналитикаВидаУчетаТовары.Организация,
+	АналитикаУчетаЗатратТовары.Затрата КАК Номенклатура,
+	(ВЫБОР КОГДА (&amp;НастройкаАналитикиХарактеристикаЗатратыРегламентированныйУчет)
+		ТОГДА АналитикаУчетаЗатратТовары.ХарактеристикаЗатраты
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+	 КОНЕЦ) КАК ХарактеристикаНоменклатуры,
+	
+	ВЫБОР
+		КОГДА СУММА(УчетЗатратТовары.Количество) = 0
+			ТОГДА 0
+		ИНАЧЕ СУММА(УчетЗатратТовары.Стоимость) / СУММА(УчетЗатратТовары.Количество)
+	КОНЕЦ КАК Цена,
+	НАЧАЛОПЕРИОДА(УчетЗатратТовары.Период, МЕСЯЦ) КАК ПериодМесяц
+ПОМЕСТИТЬ 
+	СебестоимостьПродаж
+ИЗ
+	(ВЫБРАТЬ
+		УчетЗатрат.АналитикаВидаУчета КАК АналитикаВидаУчета,
+		УчетЗатрат.АналитикаУчетаЗатрат КАК АналитикаУчетаЗатрат,
+		СУММА(ВЫБОР
+				КОГДА УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+						И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииРеализации)
+					ТОГДА УчетЗатрат.Количество
+				ИНАЧЕ ВЫБОР
+						КОГДА УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+								И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииВозвратТовараОтПокупателя)
+							ТОГДА -1 * УчетЗатрат.Количество
+					КОНЕЦ
+			КОНЕЦ) КАК Количество,
+		СУММА(ВЫБОР
+				КОГДА УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+						И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииРеализации)
+					ТОГДА УчетЗатрат.Стоимость
+				ИНАЧЕ ВЫБОР
+						КОГДА УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+								И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииВозвратТовараОтПокупателя)
+							ТОГДА -1 * УчетЗатрат.Стоимость
+					КОНЕЦ
+			КОНЕЦ) КАК Стоимость,
+		УчетЗатрат.Период КАК Период
+	ИЗ
+		РегистрНакопления.УчетЗатратРегл КАК УчетЗатрат
+	ГДЕ
+		УчетЗатрат.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И УчетЗатрат.Активность
+		И УчетЗатрат.АналитикаВидаУчета В
+			(ВЫБРАТЬ
+				АналитикаВидаУчетаТовары.АналитикаВидаУчета
+			 ИЗ
+				АналитикаВидаУчетаТовары КАК АналитикаВидаУчетаТовары)
+		И УчетЗатрат.АналитикаУчетаЗатрат В
+			(ВЫБРАТЬ
+				АналитикаУчетаЗатратТовары.АналитикаУчетаЗатрат
+			 ИЗ
+				АналитикаУчетаЗатратТовары КАК АналитикаУчетаЗатратТовары)
+		И (УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+				И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииРеализации)
+			ИЛИ УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+				И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииВозвратТовараОтПокупателя))
+	
+	СГРУППИРОВАТЬ ПО
+		УчетЗатрат.АналитикаВидаУчета,
+		УчетЗатрат.АналитикаУчетаЗатрат,
+		УчетЗатрат.Период
+	) КАК УчетЗатратТовары
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ 
+		АналитикаВидаУчетаТовары КАК АналитикаВидаУчетаТовары
+		ПО УчетЗатратТовары.АналитикаВидаУчета = АналитикаВидаУчетаТовары.АналитикаВидаУчета
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ 
+		АналитикаУчетаЗатратТовары КАК АналитикаУчетаЗатратТовары
+		ПО УчетЗатратТовары.АналитикаУчетаЗатрат = АналитикаУчетаЗатратТовары.АналитикаУчетаЗатрат
+
+СГРУППИРОВАТЬ ПО
+	НАЧАЛОПЕРИОДА(УчетЗатратТовары.Период, МЕСЯЦ),
+    АналитикаВидаУчетаТовары.АналитикаВидаУчета,
+    АналитикаУчетаЗатратТовары.АналитикаУчетаЗатрат,
+	АналитикаВидаУчетаТовары.Организация,
+	АналитикаУчетаЗатратТовары.Затрата,
+	АналитикаУчетаЗатратТовары.ХарактеристикаЗатраты
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	АналитикаВидаУчетаВыпуск.АналитикаВидаУчета,
+	АналитикаРаспределенияЗатратУслуги.АналитикаРаспределенияЗатрат,
+	АналитикаВидаУчетаВыпуск.Организация,
+	АналитикаРаспределенияЗатратУслуги.Продукция,
+	
+	(ВЫБОР КОГДА (&amp;НастройкаАналитикиХарактеристикаЗатратыРегламентированныйУчет)
+		ТОГДА АналитикаРаспределенияЗатратУслуги.ХарактеристикаПродукции
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+	 КОНЕЦ),
+	
+	ВЫБОР
+		КОГДА СУММА(УчетЗатратУслуги.Количество) = 0
+			ТОГДА 0
+		ИНАЧЕ СУММА(УчетЗатратУслуги.Стоимость) / СУММА(УчетЗатратУслуги.Количество)
+	КОНЕЦ,
+	
+	НАЧАЛОПЕРИОДА(УчетЗатратУслуги.Период, МЕСЯЦ)
+ИЗ
+	(ВЫБРАТЬ
+		УчетЗатрат.Период КАК Период,
+		УчетЗатрат.АналитикаВидаУчета КАК АналитикаВидаУчета,
+		УчетЗатрат.АналитикаРаспределенияЗатрат КАК АналитикаРаспределенияЗатрат,
+		СУММА(ВЫБОР
+				КОГДА УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+						И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииВыпускУслуги)
+					ТОГДА УчетЗатрат.Количество
+				ИНАЧЕ 0
+			КОНЕЦ) КАК Количество,
+		СУММА(ВЫБОР
+				КОГДА УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+						И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииВыпускУслуги)
+					ТОГДА УчетЗатрат.Стоимость
+				ИНАЧЕ 0
+			КОНЕЦ) КАК Стоимость
+	ИЗ
+		РегистрНакопления.УчетЗатратРегл КАК УчетЗатрат
+	ГДЕ
+		УчетЗатрат.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И УчетЗатрат.Активность
+		И УчетЗатрат.АналитикаВидаУчета В
+				(ВЫБРАТЬ
+					АналитикаВидаУчетаВыпуск.АналитикаВидаУчета
+				ИЗ
+					АналитикаВидаУчетаВыпуск КАК АналитикаВидаУчетаВыпуск)
+		И УчетЗатрат.АналитикаРаспределенияЗатрат В
+				(ВЫБРАТЬ
+					АналитикаРаспределенияЗатратУслуги.АналитикаРаспределенияЗатрат
+				ИЗ
+					АналитикаРаспределенияЗатратУслуги КАК АналитикаРаспределенияЗатратУслуги)
+		И УчетЗатрат.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+				И УчетЗатрат.КодОперации В (&amp;СписокКодовОперацииВыпускУслуги)
+	
+	СГРУППИРОВАТЬ ПО
+		УчетЗатрат.Период,
+		УчетЗатрат.АналитикаВидаУчета,
+		УчетЗатрат.АналитикаРаспределенияЗатрат
+	) КАК УчетЗатратУслуги
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ 
+		АналитикаВидаУчетаВыпуск КАК АналитикаВидаУчетаВыпуск
+		ПО УчетЗатратУслуги.АналитикаВидаУчета = АналитикаВидаУчетаВыпуск.АналитикаВидаУчета
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ 
+		АналитикаРаспределенияЗатратУслуги КАК АналитикаРаспределенияЗатратУслуги
+		ПО УчетЗатратУслуги.АналитикаРаспределенияЗатрат = АналитикаРаспределенияЗатратУслуги.АналитикаРаспределенияЗатрат
+
+СГРУППИРОВАТЬ ПО
+	НАЧАЛОПЕРИОДА(УчетЗатратУслуги.Период, МЕСЯЦ),
+	АналитикаВидаУчетаВыпуск.АналитикаВидаУчета,
+	АналитикаРаспределенияЗатратУслуги.АналитикаРаспределенияЗатрат,
+	АналитикаВидаУчетаВыпуск.Организация,
+	АналитикаРаспределенияЗатратУслуги.Продукция,
+	АналитикаРаспределенияЗатратУслуги.ХарактеристикаПродукции
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	ХарактеристикаНоменклатуры,
+	ПериодМесяц
+;
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	
+	АналитикаВидаУчетаПродажи.Организация КАК Организация,
+	
+	АналитикаУчетаПартийПродажи.Комиссионер КАК Покупатель,
+	АналитикаУчетаПартийПродажи.ДоговорКомиссионера КАК ДоговорПокупателя,
+	АналитикаУчетаПартийПродажи.Заказ КАК ЗаказПокупателя,
+	
+	АналитикаУчетаНоменклатурыПродажи.Продукция КАК Номенклатура,
+	
+	(ВЫБОР КОГДА (&amp;НастройкаАналитикиХарактеристикаПродукцииРегламентированныйУчет)
+		ТОГДА АналитикаУчетаНоменклатурыПродажи.ХарактеристикаПродукции 
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+	 КОНЕЦ) КАК ХарактеристикаНоменклатуры,
+	
+	ПродажиОбороты.Регистратор     КАК Регистратор,
+	ПродажиОбороты.ПериодДень      КАК ПериодДень,
+	ПродажиОбороты.ПериодНеделя    КАК ПериодНеделя,
+	ПродажиОбороты.ПериодДекада    КАК ПериодДекада,
+	ПродажиОбороты.ПериодМесяц     КАК ПериодМесяц,
+	ПродажиОбороты.ПериодКвартал   КАК ПериодКвартал,
+	ПродажиОбороты.ПериодПолугодие КАК ПериодПолугодие,
+	ПродажиОбороты.ПериодГод       КАК ПериодГод,
+	
+	ВЫБОР
+		КОГДА &amp;ЕдиницыКоличестваВОтчете = 0
+			ТОГДА ПродажиОбороты.КоличествоОборот
+		КОГДА &amp;ЕдиницыКоличестваВОтчете = 1
+			ТОГДА ПродажиОбороты.КоличествоОборот * ЕСТЬNULL(АналитикаУчетаНоменклатурыПродажи.Продукция.ЕдиницаХраненияОстатков.Коэффициент, 1)
+		ИНАЧЕ ПродажиОбороты.КоличествоОборот * ЕСТЬNULL(АналитикаУчетаНоменклатурыПродажи.Продукция.ЕдиницаХраненияОстатков.Коэффициент, 1) / ЕСТЬNULL(АналитикаУчетаНоменклатурыПродажи.Продукция.ЕдиницаДляОтчетов.Коэффициент, 1)
+	КОНЕЦ КАК Количество,
+	
+	ПродажиОбороты.СтоимостьОборот - ПродажиОбороты.НДСОборот КАК СтоимостьБезНДС,
+	ПродажиОбороты.НДСОборот КАК НДС,
+	ПродажиОбороты.СтоимостьОборот КАК Стоимость,
+	ПродажиОбороты.КоличествоОборот 
+	
+ПОМЕСТИТЬ 
+	СтоимостьПродаж
+	
+ИЗ
+	РегистрНакопления.УчетПродажИСебестоимости.Обороты(
+		&amp;НачалоПериода, 
+		&amp;КонецПериода, 
+		Авто, 
+		&amp;ВидУчета = 1
+	) КАК ПродажиОбороты
+	
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаВидаУчета КАК АналитикаВидаУчетаПродажи 
+		ПО ПродажиОбороты.АналитикаВидаУчета = АналитикаВидаУчетаПродажи.Ссылка
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаРаспределенияЗатрат КАК АналитикаУчетаНоменклатурыПродажи
+		ПО ПродажиОбороты.АналитикаУчетаНоменклатуры = АналитикаУчетаНоменклатурыПродажи.Ссылка
+	ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаУчетаПартий КАК АналитикаУчетаПартийПродажи	
+		ПО ПродажиОбороты.АналитикаУчетаПартий = АналитикаУчетаПартийПродажи.Ссылка
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	ХарактеристикаНоменклатуры,
+	ПериодМесяц
+;
+////////////////////////////////////////////////////////////////////////////////
+// Курсы валюты управленческого учета по месяцам на конец месяца
+//
+ВЫБРАТЬ 
+    КурсыВалютСрезПоследнихПоМесяцам.ПериодМесяц,
+    
+	ВЫБОР КОГДА &amp;ВалютаОтчета = 0 
+		ТОГДА
+			ВЫБОР КОГДА КурсыВалют.Курс = 0 
+				ТОГДА
+					1
+				ИНАЧЕ
+					КурсыВалют.Курс 
+			КОНЕЦ  / 
+			ВЫБОР КОГДА КурсыВалют.Кратность = 0 
+				ТОГДА
+					1
+				ИНАЧЕ
+					КурсыВалют.Кратность 
+			КОНЕЦ
+	ИНАЧЕ
+		1
+	КОНЕЦ КАК Курс	 
+	
+ПОМЕСТИТЬ 
+	КурсыВалютыУправленческогоУчета
+	
+ИЗ
+	(ВЫБРАТЬ
+	    СтоимостьПродаж.ПериодМесяц КАК ПериодМесяц, 
+		МАКСИМУМ(КурсыВалютВМесяце.Период) КАК ДатаКурса
+	 ИЗ
+		СтоимостьПродаж КАК СтоимостьПродаж
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют КАК КурсыВалютВМесяце
+      		ПО КурсыВалютВМесяце.Период &lt;= КОНЕЦПЕРИОДА(СтоимостьПродаж.ПериодМесяц, МЕСЯЦ)
+      		И  КурсыВалютВМесяце.Валюта = &amp;ВалютаУправленческогоУчета
+	 СГРУППИРОВАТЬ ПО
+	 	СтоимостьПродаж.ПериодМесяц
+    ) КАК КурсыВалютСрезПоследнихПоМесяцам
+    
+    ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют КАК КурсыВалют
+    ПО КурсыВалютСрезПоследнихПоМесяцам.ДатаКурса = КурсыВалют.Период И КурсыВалют.Валюта = &amp;ВалютаУправленческогоУчета
+;
+////////////////////////////////////////////////////////////////////////////////
+// Результирующий 
+//
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	
+	ПродажиОбороты.Организация КАК Организация,
+	
+	ПродажиОбороты.Номенклатура               КАК Номенклатура,
+	ПродажиОбороты.ХарактеристикаНоменклатуры КАК ХарактеристикаНоменклатуры,
+	
+	ПродажиОбороты.Покупатель         КАК Покупатель,
+	ПродажиОбороты.ДоговорПокупателя  КАК ДоговорПокупателя,
+	ПродажиОбороты.ЗаказПокупателя    КАК ЗаказПокупателя,
+	
+	ПродажиОбороты.Регистратор     КАК ДокументПродажи,
+	
+	ПродажиОбороты.Регистратор     КАК Регистратор,
+	ПродажиОбороты.ПериодДень      КАК ПериодДень,
+	ПродажиОбороты.ПериодНеделя    КАК ПериодНеделя,
+	ПродажиОбороты.ПериодДекада    КАК ПериодДекада,
+	ПродажиОбороты.ПериодМесяц     КАК ПериодМесяц,
+	ПродажиОбороты.ПериодКвартал   КАК ПериодКвартал,
+	ПродажиОбороты.ПериодПолугодие КАК ПериодПолугодие,
+	ПродажиОбороты.ПериодГод       КАК ПериодГод,
+	
+	ПродажиОбороты.Количество КАК Количество,
+	
+	(ПродажиОбороты.СтоимостьБезНДС) / КурсВалютыУправленческогоУчета.Курс КАК СтоимостьБезНДС,
+	(ПродажиОбороты.НДС) / КурсВалютыУправленческогоУчета.Курс КАК НДС,
+	(ПродажиОбороты.Стоимость) / КурсВалютыУправленческогоУчета.Курс КАК Стоимость,
+	
+	(ПродажиОбороты.КоличествоОборот * ЕСТЬNULL(ТаблицаРегистраПродажиСебестоимость.Цена, 0)) / КурсВалютыУправленческогоУчета.Курс КАК Себестоимость,
+	
+	(ПродажиОбороты.СтоимостьБезНДС) / КурсВалютыУправленческогоУчета.Курс - (ПродажиОбороты.КоличествоОборот * ЕСТЬNULL(ТаблицаРегистраПродажиСебестоимость.Цена, 0)) / КурсВалютыУправленческогоУчета.Курс КАК ВаловаяПрибыль,
+	
+	// рассчитываются на закладке "Ресурсы" 
+	0 КАК СтоимостьЕд,
+	0 КАК СтоимостьБезНДСЕд,
+	0 КАК СебестоимостьЕд,
+	0 КАК ВаловаяПрибыльЕд,
+	0 КАК Эффективность,
+	0 КАК Рентабельность
+	
+ИЗ
+	СтоимостьПродаж КАК ПродажиОбороты
+	
+	ЛЕВОЕ СОЕДИНЕНИЕ 
+		(ВЫБРАТЬ
+			СебестоимостьПродаж.Номенклатура КАК Номенклатура,
+			СебестоимостьПродаж.ХарактеристикаНоменклатуры КАК ХарактеристикаНоменклатуры,
+			СебестоимостьПродаж.Цена КАК Цена,
+			СебестоимостьПродаж.Организация КАК Организация,
+			СебестоимостьПродаж.ПериодМесяц КАК ПериодМесяц
+		ИЗ
+			СебестоимостьПродаж КАК СебестоимостьПродаж
+		) КАК ТаблицаРегистраПродажиСебестоимость
+	
+		ПО  ПродажиОбороты.Номенклатура = ТаблицаРегистраПродажиСебестоимость.Номенклатура
+			И (ВЫБОР КОГДА (&amp;НастройкаАналитикиХарактеристикаЗатратыРегламентированныйУчет И &amp;НастройкаАналитикиХарактеристикаПродукцииРегламентированныйУчет)
+			     ТОГДА ПродажиОбороты.ХарактеристикаНоменклатуры = ТаблицаРегистраПродажиСебестоимость.ХарактеристикаНоменклатуры
+			     ИНАЧЕ Истина
+		    КОНЕЦ)
+			
+			И ПродажиОбороты.ПериодМесяц = ТаблицаРегистраПродажиСебестоимость.ПериодМесяц
+			И ПродажиОбороты.Организация = ТаблицаРегистраПродажиСебестоимость.Организация
+	
+	{ЛЕВОЕ СОЕДИНЕНИЕ 
+	 	КурсыВалютыУправленческогоУчета КАК КурсВалютыУправленческогоУчета
+		ПО ПродажиОбороты.ПериодМесяц = КурсВалютыУправленческогоУчета.ПериодМесяц
+	}	
+	
+ГДЕ
+	ПродажиОбороты.КоличествоОборот &lt;&gt; 0
+	ИЛИ ПродажиОбороты.Стоимость &lt;&gt; 0
+
+////////////////////////////////////////////////////////////////////////////////
+// ХАРАКТЕРИСТИКИ
+//
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ХарактеристикиНоменклатуры)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ХарактеристикиНоменклатуры))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ХарактеристикиНоменклатуры)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ХарактеристикиНоменклатуры))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.КонтактныеЛицаКонтрагентов)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_КонтактныеЛицаКонтрагентов))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.КонтактныеЛицаКонтрагентов)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_КонтактныеЛицаКонтрагентов))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.КонтактныеЛица)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_КонтактныеЛица))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.КонтактныеЛица)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_КонтактныеЛица))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Контрагенты)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Контрагенты))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Контрагенты)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Контрагенты))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Номенклатура)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Номенклатура))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Номенклатура)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Номенклатура))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ОсновныеСредства)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ОсновныеСредства))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ОсновныеСредства)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ОсновныеСредства))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Подразделения)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Подразделения))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Подразделения)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Подразделения))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Проекты)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Проекты))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Проекты)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Проекты))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Склады)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Склады))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Склады)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_Склады))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ФизическиеЛица)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ФизическиеЛица))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ФизическиеЛица)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ФизическиеЛица))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Документ)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Документы))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Документ)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Документы))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ДоговорыКонтрагентов)
+	СПИСОК (ВЫБРАТЬ 
+						СвойстваОбъектов.Ссылка,
+						СвойстваОбъектов.Наименование,
+						СвойстваОбъектов.ТипЗначения
+					ИЗ 
+						ПланВидовХарактеристик.СвойстваОбъектов КАК СвойстваОбъектов
+					ГДЕ НазначениеСвойства = Значение(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ДоговорыКонтрагентов))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ТИПЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯ РегистрСведений.ЗначенияСвойствОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Свойство
+	ЗНАЧЕНИЕ Значение }
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.ДоговорыКонтрагентов)
+	СПИСОК (ВЫБРАТЬ
+						КатегорииОбъектов.Ссылка,
+						КатегорииОбъектов.Наименование
+					ИЗ
+						Справочник.КатегорииОбъектов КАК КатегорииОбъектов
+					ГДЕ
+						КатегорииОбъектов.НазначениеКатегории = ЗНАЧЕНИЕ(ПланВидовХарактеристик.НазначенияСвойствКатегорийОбъектов.Справочник_ДоговорыКонтрагентов))
+	ИДЕНТИФИКАТОР Ссылка
+	ИМЯ Наименование
+	ЗНАЧЕНИЯ РегистрСведений.КатегорииОбъектов
+	ОБЪЕКТ Объект
+	ХАРАКТЕРИСТИКА Категория }
+			
+</query>
+		</item>
+	</dataSet>
+	<totalField>
+		<dataPath>ВаловаяПрибыль</dataPath>
+		<expression>Сумма(ВаловаяПрибыль)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НДС</dataPath>
+		<expression>Сумма(НДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Себестоимость</dataPath>
+		<expression>Сумма(Себестоимость)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Стоимость</dataPath>
+		<expression>Сумма(Стоимость)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьБезНДС</dataPath>
+		<expression>Сумма(СтоимостьБезНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Эффективность</dataPath>
+		<expression>	100 * ВЫБОР
+		КОГДА &amp;НеВключатьНДСВСтоимостьПартий
+			ТОГДА ВЫБОР
+					КОГДА СУММА(Себестоимость) &lt;&gt; 0
+						ТОГДА (СУММА(СтоимостьБезНДС) - СУММА(Себестоимость)) / СУММА(Себестоимость)
+					ИНАЧЕ 0
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА СУММА(Себестоимость) &lt;&gt; 0
+					ТОГДА (СУММА(Стоимость) - СУММА(Себестоимость)) / СУММА(Себестоимость)
+				ИНАЧЕ 0
+			КОНЕЦ
+	КОНЕЦ
+</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Рентабельность</dataPath>
+		<expression>	100 * ВЫБОР
+		КОГДА &amp;НеВключатьНДСВСтоимостьПартий
+			ТОГДА ВЫБОР
+					КОГДА Сумма(СтоимостьБезНДС) &lt;&gt; 0
+						ТОГДА (Сумма(СтоимостьБезНДС) - Сумма(Себестоимость)) / Сумма(СтоимостьБезНДС)
+					ИНАЧЕ 0
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА Сумма(Стоимость) &lt;&gt; 0
+					ТОГДА (Сумма(Стоимость) - Сумма(Себестоимость)) / Сумма(Стоимость)
+				ИНАЧЕ 0
+			КОНЕЦ
+	КОНЕЦ
+</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьЕд</dataPath>
+		<expression>Сумма(Стоимость) / (ВЫБОР КОГДА Сумма(Количество) &lt;&gt; 0 ТОГДА Сумма(Количество) ИНАЧЕ 1 КОНЕЦ)
+</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтоимостьБезНДСЕд</dataPath>
+		<expression>Сумма(СтоимостьБезНДС) / (ВЫБОР КОГДА Сумма(Количество) &lt;&gt; 0 ТОГДА Сумма(Количество) ИНАЧЕ 1 КОНЕЦ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СебестоимостьЕд</dataPath>
+		<expression>Сумма(Себестоимость) / (ВЫБОР КОГДА Сумма(Количество) &lt;&gt; 0 ТОГДА Сумма(Количество) ИНАЧЕ 1 КОНЕЦ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВаловаяПрибыльЕд</dataPath>
+		<expression>Сумма(ВаловаяПрибыль) / (ВЫБОР КОГДА Сумма(Количество) &lt;&gt; 0 ТОГДА Сумма(Количество) ИНАЧЕ 1 КОНЕЦ)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодФормированияОтчета.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>ВЫБОР КОГДА &amp;ПериодФормированияОтчета.ДатаОкончания = ДАТАВРЕМЯ(0001,01,01,00,00,00) ТОГДА ДАТАВРЕМЯ(3999,12,31,23,59,59) ИНАЧЕ КОНЕЦПЕРИОДА(&amp;ПериодФормированияОтчета.ДатаОкончания, "ДЕНЬ") КОНЕЦ</expression>
+	</parameter>
+	<parameter>
+		<name>ВидУчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид учета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:nil="true"/>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упр. учет</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">1</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регл. учет</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+	</parameter>
+	<parameter>
+		<name>ВалютаОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Валюта отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:nil="true"/>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В валюте упр. учета</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">1</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В валюте регл. учета</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+	</parameter>
+	<parameter>
+		<name>ЕдиницыКоличестваВОтчете</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество в</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:nil="true"/>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>единицах хранения</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">1</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>базовых единицах</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">2</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>единицах отчетов</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+	</parameter>
+	<parameter>
+		<name>ПериодФормированияОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НастройкаАналитикиХарактеристикаЗатратыУправленческийУчет</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Настройка аналитики характеристика затраты управленческий учет</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<expression>ОбщегоНазначения.ПолучитьЗначениеРеквизита(ЗНАЧЕНИЕ(Справочник.НастройкиАналитикиУчета.ХарактеристикаЗатраты), "УправленческийУчет")</expression>
+	</parameter>
+	<parameter>
+		<name>НеВключатьНДСВСтоимостьПартий</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Не включать НДС в стоимость партий</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<expression>ОбщегоНазначения.ПолучитьНеВключатьНДСВСтоимостьПартий(&amp;ВидУчета, &amp;ПериодФормированияОтчета)</expression>
+	</parameter>
+	<parameter>
+		<name>НастройкаАналитикиОрганизацияУправленческийУчет</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Настройка аналитики организация управленческий учет</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<expression>ОбщегоНазначения.ПолучитьЗначениеРеквизита(ЗНАЧЕНИЕ(Справочник.НастройкиАналитикиУчета.Организация), "УправленческийУчет")</expression>
+	</parameter>
+	<parameter>
+		<name>СписокКодовОперацииВозвратТовараОтПокупателя</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список кодов операции возврат товара от покупателя</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.КодыОперацийПартииТоваров</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.КодыОперацийПартииТоваров.ВозвратОтПокупателя</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.КодыОперацийПартииТоваров.ВозвратОтПокупателяТекущийМесяц</value>
+		<useRestriction>true</useRestriction>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.КодыОперацийПартииТоваров.ВозвратОтПокупателя</value>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.КодыОперацийПартииТоваров.ВозвратОтПокупателяТекущийМесяц</value>
+		</availableValue>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СписокКодовОперацииВыпускУслуги</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список кодов операции выпуск услуги</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.КодыОперацийВыпускПродукции</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.КодыОперацийВыпускПродукции.ВыпускПродукцииФиксВнешниеУслуги</value>
+		<useRestriction>true</useRestriction>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.КодыОперацийВыпускПродукции.ВыпускПродукцииФиксВнешниеУслуги</value>
+		</availableValue>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СписокКодовОперацииРеализации</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список кодов операции реализации</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.КодыОперацийПартииТоваров</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.КодыОперацийПартииТоваров.Реализация</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.КодыОперацийПартииТоваров.РеализацияРозница</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.КодыОперацийПартииТоваров.РеализацияКомиссия</value>
+		<useRestriction>true</useRestriction>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.КодыОперацийПартииТоваров.Реализация</value>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.КодыОперацийПартииТоваров.РеализацияРозница</value>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.КодыОперацийПартииТоваров.РеализацияКомиссия</value>
+		</availableValue>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ВалютаУправленческогоУчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Валюта управленческого учета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<expression>глЗначениеПеременной("ВалютаУправленческогоУчета")</expression>
+	</parameter>
+	<parameter>
+		<name>НастройкаАналитикиХарактеристикаЗатратыРегламентированныйУчет</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Настройка аналитики характеристика затраты регламентированный учет</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<expression>ОбщегоНазначения.ПолучитьЗначениеРеквизита(ЗНАЧЕНИЕ(Справочник.НастройкиАналитикиУчета.ХарактеристикаЗатраты), "РегламентированныйУчет")</expression>
+	</parameter>
+	<parameter>
+		<name>НастройкаАналитикиХарактеристикаПродукцииРегламентированныйУчет</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Настройка аналитики характеристика продукции регламентированный учет</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<expression>ОбщегоНазначения.ПолучитьЗначениеРеквизита(ЗНАЧЕНИЕ(Справочник.НастройкиАналитикиУчета.ХарактеристикаПродукции), "РегламентированныйУчет")</expression>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>УпрУчетВВалютеУпрУчета</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По данным упр. учета (в валюте упр. учета)</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Стоимость</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СтоимостьБезНДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость (за ед.)</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>СтоимостьЕд</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>СтоимостьБезНДСЕд</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Себестоимость</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СебестоимостьЕд</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВаловаяПрибыль</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВаловаяПрибыльЕд</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Эффективность</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Рентабельность</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>90ed555a-df00-44da-8093-caa06da41421</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>c157a153-0e85-4423-a85f-7d22a3a3e16c</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Номенклатура.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>b7cd1b51-1708-412a-8306-a5d48baeae87</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>306c3a27-f24e-4dfd-bbf2-536236b5780f</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВидУчета</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВалютаОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ЕдиницыКоличестваВОтчете</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПериодФормированияОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>ffa3a2b7-81de-4c8e-aa41-1160ad15408c</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>928ef22e-1811-430c-9350-9fa2f8b9c485</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валовая прибыль (расширенная аналитика)</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ХарактеристикаНоменклатуры</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>e36da6ca-79df-40b7-bb25-55be747fb826</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>РеглУчетВВалютеРеглУчета</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По данным регл. учета (в валюте регл. учета)</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Стоимость</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СтоимостьБезНДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость (за ед.)</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>СтоимостьЕд</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>СтоимостьБезНДСЕд</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Себестоимость</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СебестоимостьЕд</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВаловаяПрибыль</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВаловаяПрибыльЕд</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Эффективность</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Рентабельность</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>90ed555a-df00-44da-8093-caa06da41421</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>c157a153-0e85-4423-a85f-7d22a3a3e16c</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Номенклатура.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>b7cd1b51-1708-412a-8306-a5d48baeae87</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>306c3a27-f24e-4dfd-bbf2-536236b5780f</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВидУчета</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">1</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВалютаОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">1</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ЕдиницыКоличестваВОтчете</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПериодФормированияОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>ffa3a2b7-81de-4c8e-aa41-1160ad15408c</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>928ef22e-1811-430c-9350-9fa2f8b9c485</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валовая прибыль (расширенная аналитика)</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Номенклатура</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ХарактеристикаНоменклатуры</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>e36da6ca-79df-40b7-bb25-55be747fb826</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>РеглУчетВВалютеУпрУчета</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По данным регл. учета (в валюте упр. учета)</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Стоимость</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СтоимостьБезНДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость (за ед.)</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>СтоимостьЕд</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>СтоимостьБезНДСЕд</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Себестоимость</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СебестоимостьЕд</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВаловаяПрибыль</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВаловаяПрибыльЕд</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Эффективность</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Рентабельность</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>90ed555a-df00-44da-8093-caa06da41421</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>c157a153-0e85-4423-a85f-7d22a3a3e16c</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Номенклатура.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>b7cd1b51-1708-412a-8306-a5d48baeae87</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>306c3a27-f24e-4dfd-bbf2-536236b5780f</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВидУчета</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">1</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВалютаОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ЕдиницыКоличестваВОтчете</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПериодФормированияОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>ffa3a2b7-81de-4c8e-aa41-1160ad15408c</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>928ef22e-1811-430c-9350-9fa2f8b9c485</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валовая прибыль (расширенная аналитика)</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Номенклатура</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ХарактеристикаНоменклатуры</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>e36da6ca-79df-40b7-bb25-55be747fb826</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

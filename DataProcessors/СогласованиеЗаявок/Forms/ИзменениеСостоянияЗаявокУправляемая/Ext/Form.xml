@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Изменение состояния заявок</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ИзменитьСостояние" id="15">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.ИзменитьСостояние</CommandName>
+				<ExtendedTooltip name="ИзменитьСостояниеРасширеннаяПодсказка" id="55"/>
+			</Button>
+			<Button name="УстановитьПометки" id="53">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.УстановитьПометки</CommandName>
+				<ExtendedTooltip name="УстановитьПометкиРасширеннаяПодсказка" id="56"/>
+			</Button>
+			<Button name="СнятьПометки" id="54">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.СнятьПометки</CommandName>
+				<ExtendedTooltip name="СнятьПометкиРасширеннаяПодсказка" id="57"/>
+			</Button>
+			<ButtonGroup name="КомандыСпискаЗаявок" id="35">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды списка заявок</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды списка заявок</v8:content>
+					</v8:item>
+				</ToolTip>
+				<CommandSource>Item.ЗаявкиНаРасходованиеСредств</CommandSource>
+				<ExtendedTooltip name="КомандыСпискаЗаявокРасширеннаяПодсказка" id="58"/>
+				<ChildItems>
+					<Button name="ЗаявкиНаРасходованиеСредствНайти" id="36">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<OnlyInAllActions>true</OnlyInAllActions>
+						<CommandName>Form.Item.ЗаявкиНаРасходованиеСредств.StandardCommand.Find</CommandName>
+						<ExtendedTooltip name="ЗаявкиНаРасходованиеСредствНайтиРасширеннаяПодсказка" id="59"/>
+					</Button>
+					<Button name="ЗаявкиНаРасходованиеСредствОтменитьПоиск" id="37">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<OnlyInAllActions>true</OnlyInAllActions>
+						<CommandName>Form.Item.ЗаявкиНаРасходованиеСредств.StandardCommand.CancelSearch</CommandName>
+						<ExtendedTooltip name="ЗаявкиНаРасходованиеСредствОтменитьПоискРасширеннаяПодсказка" id="60"/>
+					</Button>
+					<Button name="ЗаявкиНаРасходованиеСредствСортироватьСписокПоВозрастанию" id="40">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<OnlyInAllActions>true</OnlyInAllActions>
+						<CommandName>Form.Item.ЗаявкиНаРасходованиеСредств.StandardCommand.SortListAsc</CommandName>
+						<ExtendedTooltip name="ЗаявкиНаРасходованиеСредствСортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="61"/>
+					</Button>
+					<Button name="ЗаявкиНаРасходованиеСредствСортироватьСписокПоУбыванию" id="41">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<OnlyInAllActions>true</OnlyInAllActions>
+						<CommandName>Form.Item.ЗаявкиНаРасходованиеСредств.StandardCommand.SortListDesc</CommandName>
+						<ExtendedTooltip name="ЗаявкиНаРасходованиеСредствСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="62"/>
+					</Button>
+					<Button name="ЗаявкиНаРасходованиеСредствВывестиСписок" id="42">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<OnlyInAllActions>true</OnlyInAllActions>
+						<CommandName>Form.Item.ЗаявкиНаРасходованиеСредств.StandardCommand.OutputList</CommandName>
+						<ExtendedTooltip name="ЗаявкиНаРасходованиеСредствВывестиСписокРасширеннаяПодсказка" id="63"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ЗаявкиНаРасходованиеСредств" id="1">
+			<CommandBarLocation>None</CommandBarLocation>
+			<SkipOnInput>false</SkipOnInput>
+			<ChangeRowSet>false</ChangeRowSet>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ЗаявкиНаРасходованиеСредств</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЗаявкиНаРасходованиеСредствКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ЗаявкиНаРасходованиеСредствКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="ЗаявкиНаРасходованиеСредствРасширеннаяПодсказка" id="64"/>
+			<SearchStringAddition name="ЗаявкиНаРасходованиеСредствСтрокаПоиска" id="65">
+				<AdditionSource>
+					<Item>ЗаявкиНаРасходованиеСредств</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаявкиНаРасходованиеСредствСтрокаПоискаКонтекстноеМеню" id="66"/>
+				<ExtendedTooltip name="ЗаявкиНаРасходованиеСредствСтрокаПоискаРасширеннаяПодсказка" id="67"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗаявкиНаРасходованиеСредствСостояниеПросмотра" id="68">
+				<AdditionSource>
+					<Item>ЗаявкиНаРасходованиеСредств</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаявкиНаРасходованиеСредствСостояниеПросмотраКонтекстноеМеню" id="69"/>
+				<ExtendedTooltip name="ЗаявкиНаРасходованиеСредствСостояниеПросмотраРасширеннаяПодсказка" id="70"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗаявкиНаРасходованиеСредствУправлениеПоиском" id="71">
+				<AdditionSource>
+					<Item>ЗаявкиНаРасходованиеСредств</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаявкиНаРасходованиеСредствУправлениеПоискомКонтекстноеМеню" id="72"/>
+				<ExtendedTooltip name="ЗаявкиНаРасходованиеСредствУправлениеПоискомРасширеннаяПодсказка" id="73"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">ЗаявкиНаРасходованиеСредствПередНачаломДобавления</Event>
+			</Events>
+			<ChildItems>
+				<CheckBoxField name="ЗаявкиНаРасходованиеСредствПометка" id="29">
+					<DataPath>Объект.ЗаявкиНаРасходованиеСредств.Пометка</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>Directly</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗаявкиНаРасходованиеСредствПометкаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ЗаявкиНаРасходованиеСредствПометкаРасширеннаяПодсказка" id="74"/>
+				</CheckBoxField>
+				<InputField name="ЗаявкиНаРасходованиеСредствДата" id="4">
+					<DataPath>Объект.ЗаявкиНаРасходованиеСредств.Дата</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗаявкиНаРасходованиеСредствДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ЗаявкиНаРасходованиеСредствДатаРасширеннаяПодсказка" id="75"/>
+				</InputField>
+				<InputField name="ЗаявкиНаРасходованиеСредствВидОперации" id="8">
+					<DataPath>Объект.ЗаявкиНаРасходованиеСредств.ВидОперации</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗаявкиНаРасходованиеСредствВидОперацииКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ЗаявкиНаРасходованиеСредствВидОперацииРасширеннаяПодсказка" id="76"/>
+				</InputField>
+				<InputField name="ЗаявкиНаРасходованиеСредствСуммаДокумента" id="16">
+					<DataPath>Объект.ЗаявкиНаРасходованиеСредств.СуммаДокумента</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗаявкиНаРасходованиеСредствСуммаДокументаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ЗаявкиНаРасходованиеСредствСуммаДокументаРасширеннаяПодсказка" id="77"/>
+				</InputField>
+				<InputField name="ЗаявкиНаРасходованиеСредствВалюта" id="18">
+					<DataPath>Объект.ЗаявкиНаРасходованиеСредств.Валюта</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗаявкиНаРасходованиеСредствВалютаКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ЗаявкиНаРасходованиеСредствВалютаРасширеннаяПодсказка" id="78"/>
+				</InputField>
+				<InputField name="ЗаявкиНаРасходованиеСредствОтветственный" id="20">
+					<DataPath>Объект.ЗаявкиНаРасходованиеСредств.Ответственный</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗаявкиНаРасходованиеСредствОтветственныйКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ЗаявкиНаРасходованиеСредствОтветственныйРасширеннаяПодсказка" id="79"/>
+				</InputField>
+				<InputField name="ЗаявкиНаРасходованиеСредствОписание" id="22">
+					<DataPath>Объект.ЗаявкиНаРасходованиеСредств.Описание</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗаявкиНаРасходованиеСредствОписаниеКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ЗаявкиНаРасходованиеСредствОписаниеРасширеннаяПодсказка" id="80"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="АнализЗаявок" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Анализ заявок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Анализ заявок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="АнализЗаявокРасширеннаяПодсказка" id="81"/>
+			<ChildItems>
+				<CommandBar name="КомандыАнализаЗаявок" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команды анализа заявок</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команды анализа заявок</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="КомандыАнализаЗаявокРасширеннаяПодсказка" id="82"/>
+					<ChildItems>
+						<Button name="Сформировать" id="50">
+							<Type>CommandBarButton</Type>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.Command.Сформировать</CommandName>
+							<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="83"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<SpreadSheetDocumentField name="РезультатАнализа" id="51">
+					<DataPath>РезультатАнализа</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<VerticalScrollBar>true</VerticalScrollBar>
+					<HorizontalScrollBar>true</HorizontalScrollBar>
+					<ContextMenu name="РезультатАнализаКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="РезультатАнализаРасширеннаяПодсказка" id="84"/>
+					<Events>
+						<Event name="DetailProcessing">РезультатАнализаОбработкаРасшифровки</Event>
+					</Events>
+				</SpreadSheetDocumentField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.СогласованиеЗаявок</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СтатусЗаявокБылИзменен" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус заявок был изменен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультатАнализа" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат анализа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НовоеСостояние" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новое состояние</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СостоянияОбъектов</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ИзменитьСостояние" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить состояние</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить состояние</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьСостояние</Action>
+		</Command>
+		<Command name="Сформировать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Сформировать</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="УстановитьПометки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьПометки</Action>
+		</Command>
+		<Command name="СнятьПометки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьПометки</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="НовоеСостояние">
+			<Type>
+				<v8:Type>cfg:EnumRef.СостоянияОбъектов</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

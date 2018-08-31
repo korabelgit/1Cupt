@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="22"/>
+		</InputField>
+		<InputField name="Префикс" id="5">
+			<DataPath>Объект.Префикс</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПрефиксКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ПрефиксРасширеннаяПодсказка" id="23"/>
+		</InputField>
+		<InputField name="ГоловнаяОрганизация" id="7">
+			<DataPath>Объект.ГоловнаяОрганизация</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ГоловнаяОрганизацияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ГоловнаяОрганизацияРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="НаименованиеПолное" id="9">
+			<DataPath>Объект.НаименованиеПолное</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="НаименованиеПолноеРасширеннаяПодсказка" id="25"/>
+		</InputField>
+		<InputField name="ЮрФизЛицо" id="11">
+			<DataPath>Объект.ЮрФизЛицо</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ЮрФизЛицоКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ЮрФизЛицоРасширеннаяПодсказка" id="26"/>
+		</InputField>
+		<InputField name="ИндивидуальныйПредприниматель" id="19">
+			<DataPath>Объект.ИндивидуальныйПредприниматель</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физическое лицо</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ИндивидуальныйПредпринимательКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ИндивидуальныйПредпринимательРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="ОсновнойБанковскийСчет" id="13">
+			<DataPath>Объект.ОсновнойБанковскийСчет</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОсновнойБанковскийСчетКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ОсновнойБанковскийСчетРасширеннаяПодсказка" id="28"/>
+		</InputField>
+		<InputField name="НаименованиеПлательщикаПриПеречисленииНалогов" id="15">
+			<DataPath>Объект.НаименованиеПлательщикаПриПеречисленииНалогов</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеПлательщикаПриПеречисленииНалоговКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="НаименованиеПлательщикаПриПеречисленииНалоговРасширеннаяПодсказка" id="29"/>
+		</InputField>
+		<CheckBoxField name="ОтражатьВРегламентированномУчете" id="17">
+			<DataPath>Объект.ОтражатьВРегламентированномУчете</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОтражатьВРегламентированномУчетеКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="ОтражатьВРегламентированномУчетеРасширеннаяПодсказка" id="30"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Организации</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

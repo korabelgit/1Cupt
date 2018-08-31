@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>30</Width>
+			<Wrap>false</Wrap>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="14"/>
+		</InputField>
+		<Table name="ПериодыСмены" id="5">
+			<Representation>List</Representation>
+			<SkipOnInput>false</SkipOnInput>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ПериодыСмены</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПериодыСменыКонтекстноеМеню" id="6"/>
+			<AutoCommandBar name="ПериодыСменыКоманднаяПанель" id="7"/>
+			<ExtendedTooltip name="ПериодыСменыРасширеннаяПодсказка" id="15"/>
+			<SearchStringAddition name="ПериодыСменыСтрокаПоиска" id="16">
+				<AdditionSource>
+					<Item>ПериодыСмены</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПериодыСменыСтрокаПоискаКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="ПериодыСменыСтрокаПоискаРасширеннаяПодсказка" id="18"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПериодыСменыСостояниеПросмотра" id="19">
+				<AdditionSource>
+					<Item>ПериодыСмены</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПериодыСменыСостояниеПросмотраКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="ПериодыСменыСостояниеПросмотраРасширеннаяПодсказка" id="21"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПериодыСменыУправлениеПоиском" id="22">
+				<AdditionSource>
+					<Item>ПериодыСмены</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПериодыСменыУправлениеПоискомКонтекстноеМеню" id="23"/>
+				<ExtendedTooltip name="ПериодыСменыУправлениеПоискомРасширеннаяПодсказка" id="24"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ПериодыСменыНомерСтроки" id="8">
+					<DataPath>Объект.ПериодыСмены.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>4</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ПериодыСменыНомерСтрокиКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ПериодыСменыНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ПериодыСменыВремяНачала" id="10">
+					<DataPath>Объект.ПериодыСмены.ВремяНачала</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ПериодыСменыВремяНачалаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ПериодыСменыВремяНачалаРасширеннаяПодсказка" id="26"/>
+				</InputField>
+				<InputField name="ПериодыСменыВремяОкончания" id="12">
+					<DataPath>Объект.ПериодыСмены.ВремяОкончания</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ПериодыСменыВремяОкончанияКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ПериодыСменыВремяОкончанияРасширеннаяПодсказка" id="27"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Смены</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

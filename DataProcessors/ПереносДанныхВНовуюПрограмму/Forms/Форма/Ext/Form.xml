@@ -1,0 +1,879 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="СтраницыЗаголовокПеренос" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы заголовок перенос</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы заголовок перенос</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыЗаголовокПереносРасширеннаяПодсказка" id="142"/>
+			<ChildItems>
+				<Page name="СтраницаЗаголовокПереносНеНачат" id="4">
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СтраницаЗаголовокПереносНеНачатРасширеннаяПодсказка" id="143"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация75" id="5">
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+							<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Внимание! Операция может занять продолжительное время.</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="Декорация75КонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="Декорация75РасширеннаяПодсказка" id="144"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЗаголовокПереносВыполняется" id="7">
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СтраницаЗаголовокПереносВыполняетсяРасширеннаяПодсказка" id="145"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация40" id="8">
+							<Font ref="sys:DefaultGUIFont" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выполняется перенос данных...</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="Декорация40КонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="Декорация40РасширеннаяПодсказка" id="146"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЗаголовокПереносЗавершен" id="10">
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СтраницаЗаголовокПереносЗавершенРасширеннаяПодсказка" id="147"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация101" id="11">
+							<Font ref="sys:DefaultGUIFont" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перенос завершен</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="Декорация101КонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="Декорация101РасширеннаяПодсказка" id="148"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаПодвал" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="149"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаВыгрузка" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выгрузка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выгрузка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВыгрузкаРасширеннаяПодсказка" id="150"/>
+					<ChildItems>
+						<Pages name="Выгрузка" id="39">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выгрузка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подключение ИБ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ВыгрузкаРасширеннаяПодсказка" id="151"/>
+							<ChildItems>
+								<Page name="Выгрузка1" id="40">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгрузка1</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгрузка1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="Выгрузка1РасширеннаяПодсказка" id="152"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация45" id="41">
+											<Width>4</Width>
+											<Height>2</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.ПереносДанныхВОчередиВыгрузка</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+												<xr:TransparentPixel x="27" y="4"/>
+											</Picture>
+											<ContextMenu name="Декорация45КонтекстноеМеню" id="42"/>
+											<ExtendedTooltip name="Декорация45РасширеннаяПодсказка" id="153"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="Выгрузка2" id="43">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгрузка2</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгрузка и б1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="Выгрузка2РасширеннаяПодсказка" id="154"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация46" id="44">
+											<Width>4</Width>
+											<Height>2</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.ПереносДанныхВыполняетсяВыгрузка</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+												<xr:TransparentPixel x="29" y="6"/>
+											</Picture>
+											<ContextMenu name="Декорация46КонтекстноеМеню" id="45"/>
+											<ExtendedTooltip name="Декорация46РасширеннаяПодсказка" id="155"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="Выгрузка3" id="46">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгрузка3</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгрузка и б1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="Выгрузка3РасширеннаяПодсказка" id="156"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация47" id="47">
+											<Width>4</Width>
+											<Height>2</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.ПереносДанныхОшибкаВыгрузка</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+												<xr:TransparentPixel x="25" y="6"/>
+											</Picture>
+											<ContextMenu name="Декорация47КонтекстноеМеню" id="48"/>
+											<ExtendedTooltip name="Декорация47РасширеннаяПодсказка" id="157"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="Выгрузка4" id="49">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгрузка4</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгрузка и б1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="Выгрузка4РасширеннаяПодсказка" id="158"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация48" id="50">
+											<Width>4</Width>
+											<Height>2</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.ПереносДанныхУспехВыгрузка</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+												<xr:TransparentPixel x="25" y="4"/>
+											</Picture>
+											<ContextMenu name="Декорация48КонтекстноеМеню" id="51"/>
+											<ExtendedTooltip name="Декорация48РасширеннаяПодсказка" id="159"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<Pages name="ВыгрузкаНадпись" id="52">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выгрузка надпись</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выгрузка надпись</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Height>2</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ВыгрузкаНадписьРасширеннаяПодсказка" id="160"/>
+							<ChildItems>
+								<Page name="ВыгрузкаНадписьНеВыполняется" id="53">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгрузка надпись не выполняется</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгрузка ИБНадпись выполняется</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ВыгрузкаНадписьНеВыполняетсяРасширеннаяПодсказка" id="161"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация64" id="54">
+											<Enabled>false</Enabled>
+											<Height>2</Height>
+											<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выгрузка данных</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="Декорация64КонтекстноеМеню" id="55"/>
+											<ExtendedTooltip name="Декорация64РасширеннаяПодсказка" id="162"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="ВыгрузкаНадписьВыполняется" id="56">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгрузка надпись выполняется</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгрузка надпись выполняется</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ВыгрузкаНадписьВыполняетсяРасширеннаяПодсказка" id="163"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация65" id="57">
+											<Width>20</Width>
+											<Height>2</Height>
+											<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выгрузка данных</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="Декорация65КонтекстноеМеню" id="58"/>
+											<ExtendedTooltip name="Декорация65РасширеннаяПодсказка" id="164"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="ВыгрузкаНадписьВыполнено" id="59">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгрузка надпись выполнено</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгрузка ИБНадпись выполняется</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ВыгрузкаНадписьВыполненоРасширеннаяПодсказка" id="165"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация83" id="60">
+											<Height>2</Height>
+											<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выгрузка данных</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="Декорация83КонтекстноеМеню" id="61"/>
+											<ExtendedTooltip name="Декорация83РасширеннаяПодсказка" id="166"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРезультат" id="110">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа результат</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа результат</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРезультатРасширеннаяПодсказка" id="167"/>
+			<ChildItems>
+				<Pages name="СтраницыРезультат" id="111">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы результат</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы результат</v8:content>
+						</v8:item>
+					</ToolTip>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="СтраницыРезультатРасширеннаяПодсказка" id="168"/>
+					<ChildItems>
+						<Page name="Процесс" id="112">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Процесс</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Процесс</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ПроцессРасширеннаяПодсказка" id="169"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПроцесс" id="113">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа процесс</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа процесс</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПроцессРасширеннаяПодсказка" id="170"/>
+									<ChildItems>
+										<LabelField name="ЭтапКонвертации" id="122">
+											<DataPath>ЭтапКонвертации</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Width>75</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ЭтапКонвертацииКонтекстноеМеню" id="123"/>
+											<ExtendedTooltip name="ЭтапКонвертацииРасширеннаяПодсказка" id="171"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="Успех" id="124">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Успех</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Успех</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="УспехРасширеннаяПодсказка" id="172"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаУспех" id="125">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа успех</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа успех файл</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаУспехРасширеннаяПодсказка" id="173"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаУспехЛевая" id="126">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа успех левая</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа успех файл левая</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаУспехЛеваяРасширеннаяПодсказка" id="174"/>
+											<ChildItems>
+												<PictureDecoration name="Декорация76" id="127">
+													<Width>3</Width>
+													<Height>2</Height>
+													<PictureSize>Proportionally</PictureSize>
+													<Picture>
+														<xr:Ref>CommonPicture.ПереносДанныхЕстьУспех</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+														<xr:TransparentPixel x="4" y="6"/>
+													</Picture>
+													<ContextMenu name="Декорация76КонтекстноеМеню" id="128"/>
+													<ExtendedTooltip name="Декорация76РасширеннаяПодсказка" id="175"/>
+												</PictureDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаУспехПравая" id="129">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа успех правая</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа успех файл правая</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаУспехПраваяРасширеннаяПодсказка" id="176"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация77" id="130">
+													<Height>2</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<Font ref="sys:DefaultGUIFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content> Перенос данных прошел успешно!</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="Декорация77КонтекстноеМеню" id="131"/>
+													<ExtendedTooltip name="Декорация77РасширеннаяПодсказка" id="177"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="Ошибки" id="132">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ошибки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ошибки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ОшибкиРасширеннаяПодсказка" id="178"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОшибки" id="133">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ошибки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ошибки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОшибкиРасширеннаяПодсказка" id="179"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаОшибкиЛевая" id="134">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа ошибки Левая</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа ошибки левая</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОшибкиЛеваяРасширеннаяПодсказка" id="180"/>
+											<ChildItems>
+												<PictureDecoration name="Декорация78" id="135">
+													<Width>3</Width>
+													<Height>1</Height>
+													<PictureSize>Proportionally</PictureSize>
+													<Picture>
+														<xr:Ref>CommonPicture.ПереносДанныхЕстьОшибка</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+														<xr:TransparentPixel x="26" y="9"/>
+													</Picture>
+													<ContextMenu name="Декорация78КонтекстноеМеню" id="136"/>
+													<ExtendedTooltip name="Декорация78РасширеннаяПодсказка" id="181"/>
+												</PictureDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаОшибкиПравая" id="137">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа ошибки Правая</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа ошибки правая</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОшибкиПраваяРасширеннаяПодсказка" id="182"/>
+											<ChildItems>
+												<LabelDecoration name="ГиперссылкаОшибки" id="138">
+													<Width>20</Width>
+													<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Информация об ошибках</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ГиперссылкаОшибкиКонтекстноеМеню" id="139"/>
+													<ExtendedTooltip name="ГиперссылкаОшибкиРасширеннаяПодсказка" id="183"/>
+													<Events>
+														<Event name="Click">ГиперссылкаОшибкиНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="Декорация79" id="140">
+									<Height>2</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Рекомендуется ознакомиться с информацией об ошибках. 
+Возможно, потребуется повторить перенос данных.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация79КонтекстноеМеню" id="141"/>
+									<ExtendedTooltip name="Декорация79РасширеннаяПодсказка" id="184"/>
+								</LabelDecoration>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПереносДанныхВНовуюПрограмму</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ИмяФайлаПравил" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя файла правил</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяФайлаПротокола" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя файла протокола</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодГод" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период год</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяФайлаРезультатов" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя файла результатов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерРелизаКонфигурации" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер релиза конфигурации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторКонфигурации" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор конфигурации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтапКонвертации" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этап конвертации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокЭтаповВыгрузки" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список этапов выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаОшибок" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица ошибок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Этап" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этап</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ошибка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Рекомендации" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Рекомендации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Расшифровка" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расшифровка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ВыполнениеУсловийПоДоговорамКонтрагентов</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор контрагента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура условий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика номенклатуры условий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументЗакупки</dataPath>
+			<field>ДокументЗакупки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ закупки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказПоставщику</dataPath>
+			<field>ЗаказПоставщику</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ поставщику</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПлан</dataPath>
+			<field>КоличествоПлан</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество план</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоФакт</dataPath>
+			<field>КоличествоФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество факт</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проект</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусПартии</dataPath>
+			<field>СтатусПартии</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус партии</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПлан</dataPath>
+			<field>СуммаПлан</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма план</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаФакт</dataPath>
+			<field>СуммаФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма факт</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПродажи</dataPath>
+			<field>ДокументПродажи</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ продажи</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказПокупателя</dataPath>
+			<field>ЗаказПокупателя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ покупателя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	УсловияПоставокПоДоговорам.Контрагент,
+	УсловияПоставокПоДоговорам.ДоговорКонтрагента,
+	УсловияПоставокПоДоговорам.Периодичность,
+	УсловияПоставокПоДоговорам.Номенклатура,
+	УсловияПоставокПоДоговорам.ХарактеристикаНоменклатуры,
+	ЕСТЬNULL(УсловияПоставокПоДоговорам.СуммаУпрУчета, 0) КАК СуммаУпрУчета,
+	ЕСТЬNULL(УсловияПоставокПоДоговорам.Количество, 0) КАК Количество,
+	ЕСТЬNULL(УсловияПоставокПоДоговорам.СуммаПоНоменклатуре, 0) КАК СуммаПоНоменклатуре,
+	ВЫБОР
+		КОГДА УсловияПоставокПоДоговорам.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Неделя)
+			ТОГДА НАЧАЛОПЕРИОДА(ПроизводственныйКалендарь.ДатаКалендаря, НЕДЕЛЯ)
+		КОГДА УсловияПоставокПоДоговорам.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Декада)
+			ТОГДА НАЧАЛОПЕРИОДА(ПроизводственныйКалендарь.ДатаКалендаря, ДЕКАДА)
+		КОГДА УсловияПоставокПоДоговорам.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Месяц)
+			ТОГДА НАЧАЛОПЕРИОДА(ПроизводственныйКалендарь.ДатаКалендаря, МЕСЯЦ)
+		КОГДА УсловияПоставокПоДоговорам.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Квартал)
+			ТОГДА НАЧАЛОПЕРИОДА(ПроизводственныйКалендарь.ДатаКалендаря, КВАРТАЛ)
+		КОГДА УсловияПоставокПоДоговорам.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Полугодие)
+			ТОГДА НАЧАЛОПЕРИОДА(ПроизводственныйКалендарь.ДатаКалендаря, ПОЛУГОДИЕ)
+		КОГДА УсловияПоставокПоДоговорам.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Год)
+			ТОГДА НАЧАЛОПЕРИОДА(ПроизводственныйКалендарь.ДатаКалендаря, ГОД)
+		ИНАЧЕ НАЧАЛОПЕРИОДА(ПроизводственныйКалендарь.ДатаКалендаря, ДЕНЬ)
+	КОНЕЦ КАК Период
+ПОМЕСТИТЬ УсловияПоставок
+ИЗ
+	РегистрСведений.РегламентированныйПроизводственныйКалендарь КАК ПроизводственныйКалендарь
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			УсловияОбщие.Период КАК Период,
+			УсловияОбщие.ДатаОкончания КАК ДатаОкончания,
+			УсловияОбщие.ДоговорКонтрагента.Владелец КАК Контрагент,
+			УсловияОбщие.ДоговорКонтрагента КАК ДоговорКонтрагента,
+			УсловияОбщие.Периодичность КАК Периодичность,
+			УсловияОбщие.СуммаУпрУчета КАК СуммаУпрУчета,
+			УсловияПоНоменклатуре.Номенклатура КАК Номенклатура,
+			УсловияПоНоменклатуре.ХарактеристикаНоменклатуры КАК ХарактеристикаНоменклатуры,
+			ЕСТЬNULL(УсловияПоНоменклатуре.Количество, 0) КАК Количество,
+			ВЫРАЗИТЬ(ЕСТЬNULL(УсловияПоНоменклатуре.Сумма * УсловияОбщие.СуммаУпрУчета / УсловияОбщие.СуммаВзаиморасчетов, УсловияОбщие.СуммаУпрУчета) КАК ЧИСЛО(15, 2)) КАК СуммаПоНоменклатуре
+		ИЗ
+			РегистрСведений.УсловияПоставокПоДоговорамКонтрагентовОбщие КАК УсловияОбщие
+				ЛЕВОЕ СОЕДИНЕНИЕ Документ.УсловияПоставокПоДоговорамКонтрагентов.НоменклатураДоговора КАК УсловияПоНоменклатуре
+				ПО УсловияОбщие.Регистратор = УсловияПоНоменклатуре.Ссылка
+		ГДЕ
+			(&amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+					ИЛИ УсловияОбщие.Период &gt;= &amp;НачалоПериода)
+			И (&amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+					ИЛИ УсловияОбщие.Период &lt;= &amp;КонецПериода)) КАК УсловияПоставокПоДоговорам
+		ПО ПроизводственныйКалендарь.ДатаКалендаря &gt;= УсловияПоставокПоДоговорам.Период
+			И ПроизводственныйКалендарь.ДатаКалендаря &lt;= УсловияПоставокПоДоговорам.ДатаОкончания
+ГДЕ
+	(&amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ИЛИ ПроизводственныйКалендарь.ДатаКалендаря &gt;= &amp;НачалоПериода)
+	И (&amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ИЛИ ПроизводственныйКалендарь.ДатаКалендаря &lt;= &amp;КонецПериода)
+	И (ЕСТЬNULL(УсловияПоставокПоДоговорам.СуммаУпрУчета, 0) &lt;&gt; 0
+			ИЛИ ЕСТЬNULL(УсловияПоставокПоДоговорам.Количество, 0) &lt;&gt; 0)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	УсловияПоставок.Контрагент,
+	УсловияПоставок.ДоговорКонтрагента,
+	УсловияПоставок.Период,
+	УсловияПоставок.Периодичность,
+	УсловияПоставок.СуммаУпрУчета,
+	СУММА(УсловияПоставок.СуммаПоНоменклатуре) КАК СуммаПоНоменклатуре
+ПОМЕСТИТЬ ОтличияПоДоговорамИНоменклатуре
+ИЗ
+	УсловияПоставок КАК УсловияПоставок
+ГДЕ
+	УсловияПоставок.Номенклатура ЕСТЬ НЕ NULL 
+
+СГРУППИРОВАТЬ ПО
+	УсловияПоставок.Контрагент,
+	УсловияПоставок.ДоговорКонтрагента,
+	УсловияПоставок.Период,
+	УсловияПоставок.Периодичность,
+	УсловияПоставок.СуммаУпрУчета
+
+ИМЕЮЩИЕ
+	СУММА(УсловияПоставок.СуммаПоНоменклатуре) &lt;&gt; УсловияПоставок.СуммаУпрУчета
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЗакупкиОбороты.ПериодДень,
+	ЗакупкиОбороты.ПериодНеделя,
+	ЗакупкиОбороты.ПериодДекада,
+	ЗакупкиОбороты.ПериодМесяц,
+	ЗакупкиОбороты.ПериодКвартал,
+	ЗакупкиОбороты.ПериодПолугодие,
+	ЗакупкиОбороты.ПериодГод,
+	ЗакупкиОбороты.Номенклатура,
+	ЗакупкиОбороты.ХарактеристикаНоменклатуры,
+	ЗакупкиОбороты.ДоговорКонтрагента,
+	ЗакупкиОбороты.КоличествоОборот,
+	ЗакупкиОбороты.СтоимостьОборот
+ПОМЕСТИТЬ ДвиженияПоДоговору
+ИЗ
+	РегистрНакопления.Закупки.Обороты(
+			,
+			,
+			Авто,
+			ДоговорКонтрагента В
+				(ВЫБРАТЬ РАЗЛИЧНЫЕ
+					УсловияПоставок.ДоговорКонтрагента
+				ИЗ
+					УсловияПоставок)) КАК ЗакупкиОбороты
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПродажиОбороты.ПериодДень,
+	ПродажиОбороты.ПериодНеделя,
+	ПродажиОбороты.ПериодДекада,
+	ПродажиОбороты.ПериодМесяц,
+	ПродажиОбороты.ПериодКвартал,
+	ПродажиОбороты.ПериодПолугодие,
+	ПродажиОбороты.ПериодГод,
+	ПродажиОбороты.Номенклатура,
+	ПродажиОбороты.ХарактеристикаНоменклатуры,
+	ПродажиОбороты.ДоговорКонтрагента,
+	ПродажиОбороты.КоличествоОборот,
+	ПродажиОбороты.СтоимостьОборот
+ИЗ
+	РегистрНакопления.Продажи.Обороты(
+			,
+			,
+			Авто,
+			ДоговорКонтрагента В
+				(ВЫБРАТЬ РАЗЛИЧНЫЕ
+					УсловияПоставок.ДоговорКонтрагента
+				ИЗ
+					УсловияПоставок)) КАК ПродажиОбороты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Поставки.Период,
+	Поставки.Контрагент,
+	Поставки.ДоговорКонтрагента,
+	Поставки.Номенклатура,
+	Поставки.ХарактеристикаНоменклатуры,
+	Поставки.КоличествоПлан,
+	Поставки.СуммаПлан,
+	СУММА(Поставки.КоличествоФакт) КАК КоличествоФакт,
+	СУММА(Поставки.СуммаФакт) КАК СуммаФакт
+ИЗ
+	(ВЫБРАТЬ
+		УсловияПоставок.Период КАК Период,
+		УсловияПоставок.Контрагент КАК Контрагент,
+		УсловияПоставок.ДоговорКонтрагента КАК ДоговорКонтрагента,
+		УсловияПоставок.Номенклатура КАК Номенклатура,
+		УсловияПоставок.ХарактеристикаНоменклатуры КАК ХарактеристикаНоменклатуры,
+		УсловияПоставок.Количество КАК КоличествоПлан,
+		УсловияПоставок.СуммаПоНоменклатуре КАК СуммаПлан,
+		ВЫБОР
+			КОГДА ВЫБОР
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.День)
+						ТОГДА ДвиженияПоДоговору.ПериодДень
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Неделя)
+						ТОГДА ДвиженияПоДоговору.ПериодНеделя
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Декада)
+						ТОГДА ДвиженияПоДоговору.ПериодДекада
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Месяц)
+						ТОГДА ДвиженияПоДоговору.ПериодМесяц
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Квартал)
+						ТОГДА ДвиженияПоДоговору.ПериодКвартал
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Полугодие)
+						ТОГДА ДвиженияПоДоговору.ПериодПолугодие
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Год)
+						ТОГДА ДвиженияПоДоговору.ПериодГод
+					ИНАЧЕ NULL
+				КОНЕЦ = УсловияПоставок.Период
+				ТОГДА ДвиженияПоДоговору.КоличествоОборот
+			ИНАЧЕ 0
+		КОНЕЦ КАК КоличествоФакт,
+		ВЫБОР
+			КОГДА ВЫБОР
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.День)
+						ТОГДА ДвиженияПоДоговору.ПериодДень
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Неделя)
+						ТОГДА ДвиженияПоДоговору.ПериодНеделя
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Декада)
+						ТОГДА ДвиженияПоДоговору.ПериодДекада
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Месяц)
+						ТОГДА ДвиженияПоДоговору.ПериодМесяц
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Квартал)
+						ТОГДА ДвиженияПоДоговору.ПериодКвартал
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Полугодие)
+						ТОГДА ДвиженияПоДоговору.ПериодПолугодие
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Год)
+						ТОГДА ДвиженияПоДоговору.ПериодГод
+					ИНАЧЕ NULL
+				КОНЕЦ = УсловияПоставок.Период
+				ТОГДА ДвиженияПоДоговору.СтоимостьОборот
+			ИНАЧЕ 0
+		КОНЕЦ КАК СуммаФакт
+	ИЗ
+		УсловияПоставок КАК УсловияПоставок
+			ЛЕВОЕ СОЕДИНЕНИЕ ДвиженияПоДоговору КАК ДвиженияПоДоговору
+			ПО УсловияПоставок.ДоговорКонтрагента = ДвиженияПоДоговору.ДоговорКонтрагента
+				И (УсловияПоставок.Номенклатура = ДвиженияПоДоговору.Номенклатура
+					ИЛИ УсловияПоставок.Номенклатура ЕСТЬ NULL )
+				И (УсловияПоставок.ХарактеристикаНоменклатуры = ДвиженияПоДоговору.ХарактеристикаНоменклатуры
+					ИЛИ УсловияПоставок.ХарактеристикаНоменклатуры ЕСТЬ NULL )
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		УсловияПоставок.Период,
+		УсловияПоставок.Контрагент,
+		УсловияПоставок.ДоговорКонтрагента,
+		NULL,
+		NULL,
+		0,
+		УсловияПоставок.СуммаУпрУчета - УсловияПоставок.СуммаПоНоменклатуре,
+		0,
+		ВЫБОР
+			КОГДА ВЫБОР
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.День)
+						ТОГДА ДвиженияПоДоговору.ПериодДень
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Неделя)
+						ТОГДА ДвиженияПоДоговору.ПериодНеделя
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Декада)
+						ТОГДА ДвиженияПоДоговору.ПериодДекада
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Месяц)
+						ТОГДА ДвиженияПоДоговору.ПериодМесяц
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Квартал)
+						ТОГДА ДвиженияПоДоговору.ПериодКвартал
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Полугодие)
+						ТОГДА ДвиженияПоДоговору.ПериодПолугодие
+					КОГДА УсловияПоставок.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Год)
+						ТОГДА ДвиженияПоДоговору.ПериодГод
+					ИНАЧЕ NULL
+				КОНЕЦ = УсловияПоставок.Период
+				ТОГДА ДвиженияПоДоговору.СтоимостьОборот
+			ИНАЧЕ 0
+		КОНЕЦ
+	ИЗ
+		ОтличияПоДоговорамИНоменклатуре КАК УсловияПоставок
+			ЛЕВОЕ СОЕДИНЕНИЕ ДвиженияПоДоговору КАК ДвиженияПоДоговору
+			ПО УсловияПоставок.ДоговорКонтрагента = ДвиженияПоДоговору.ДоговорКонтрагента
+				И ((НЕ (УсловияПоставок.Период, УсловияПоставок.ДоговорКонтрагента, ДвиженияПоДоговору.Номенклатура, ДвиженияПоДоговору.ХарактеристикаНоменклатуры) В
+						(ВЫБРАТЬ
+							УсловияПоНоменклатуре.Период,
+							УсловияПоНоменклатуре.ДоговорКонтрагента,
+							УсловияПоНоменклатуре.Номенклатура,
+							УсловияПоНоменклатуре.ХарактеристикаНоменклатуры
+						ИЗ
+							УсловияПоставок КАК УсловияПоНоменклатуре)))) КАК Поставки
+
+СГРУППИРОВАТЬ ПО
+	Поставки.Период,
+	Поставки.Контрагент,
+	Поставки.ДоговорКонтрагента,
+	Поставки.Номенклатура,
+	Поставки.ХарактеристикаНоменклатуры,
+	Поставки.КоличествоПлан,
+	Поставки.СуммаПлан</query>
+	</dataSet>
+	<totalField>
+		<dataPath>СуммаПлан</dataPath>
+		<expression>Сумма(СуммаПлан)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаФакт</dataPath>
+		<expression>Сумма(СуммаФакт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПлан</dataPath>
+		<expression>Сумма(КоличествоПлан)</expression>
+		<group>Номенклатура</group>
+		<group>ХарактеристикаНоменклатуры</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоФакт</dataPath>
+		<expression>Сумма(КоличествоФакт)</expression>
+		<group>Номенклатура</group>
+		<group>ХарактеристикаНоменклатуры</group>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодФормированияОтчета.ДатаНачала</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодФормированияОтчета.ДатаОкончания</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПериодФормированияОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:title>Сумма</dcsset:title>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:title>Количество</dcsset:title>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>87dd1b73-de1e-4f24-9eb5-560486161446</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>04110a8d-5f48-4b96-bada-72ced795cbae</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПериодФормированияОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>65e2b425-c842-42c9-ba4c-a048ef0f5df7</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>a63404b0-bc86-44df-b1f5-ea9b0d308c37</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>a3812e02-7d68-4959-a0ac-6eab547f983f</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Контрагент</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ДоговорКонтрагента</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Период</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Номенклатура</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>fd58165c-1167-40c0-9b21-22e132b80143</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

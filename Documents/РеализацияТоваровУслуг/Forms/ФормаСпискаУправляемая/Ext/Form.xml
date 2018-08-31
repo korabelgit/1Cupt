@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<SkipOnInput>false</SkipOnInput>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="28"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="29">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="31"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="32">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="34"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="35">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="37"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="ОтражатьВУправленческомУчете" id="20">
+					<DataPath>Список.ОтражатьВУправленческомУчете</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>УУ</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтражатьВУправленческомУчетеКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ОтражатьВУправленческомУчетеРасширеннаяПодсказка" id="38"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОтражатьВБухгалтерскомУчете" id="16">
+					<DataPath>Список.ОтражатьВБухгалтерскомУчете</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БУ</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтражатьВБухгалтерскомУчетеКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ОтражатьВБухгалтерскомУчетеРасширеннаяПодсказка" id="39"/>
+				</CheckBoxField>
+				<LabelField name="Дата" id="4">
+					<DataPath>Список.Date</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<LabelField name="Номер" id="6">
+					<DataPath>Список.Number</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="41"/>
+				</LabelField>
+				<LabelField name="Контрагент" id="10">
+					<DataPath>Список.Контрагент</DataPath>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<LabelField name="Склад" id="22">
+					<DataPath>Список.Склад</DataPath>
+					<ContextMenu name="СкладКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="43"/>
+				</LabelField>
+				<LabelField name="Организация" id="12">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="44"/>
+				</LabelField>
+				<LabelField name="СуммаДокумента" id="24">
+					<DataPath>Список.СуммаДокумента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+				<LabelField name="ВалютаДокумента" id="8">
+					<DataPath>Список.ВалютаДокумента</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ВалютаДокументаКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ВалютаДокументаРасширеннаяПодсказка" id="46"/>
+				</LabelField>
+				<LabelField name="Ответственный" id="14">
+					<DataPath>Список.Ответственный</DataPath>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="47"/>
+				</LabelField>
+				<LabelField name="Комментарий" id="26">
+					<DataPath>Список.Комментарий</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументРеализацияТоваровУслуг.Ссылка,
+	ДокументРеализацияТоваровУслуг.ПометкаУдаления,
+	ДокументРеализацияТоваровУслуг.Номер,
+	ДокументРеализацияТоваровУслуг.Дата,
+	ДокументРеализацияТоваровУслуг.Проведен,
+	ДокументРеализацияТоваровУслуг.АдресДоставки,
+	ДокументРеализацияТоваровУслуг.БанковскийСчетОрганизации,
+	ДокументРеализацияТоваровУслуг.ВалютаДокумента,
+	ДокументРеализацияТоваровУслуг.ВидОперации,
+	ДокументРеализацияТоваровУслуг.ВидПередачи,
+	ДокументРеализацияТоваровУслуг.Грузоотправитель,
+	ДокументРеализацияТоваровУслуг.Грузополучатель,
+	ДокументРеализацияТоваровУслуг.ДисконтнаяКарта,
+	ДокументРеализацияТоваровУслуг.ДоговорКонтрагента,
+	ДокументРеализацияТоваровУслуг.Комментарий,
+	ДокументРеализацияТоваровУслуг.Контрагент,
+	ДокументРеализацияТоваровУслуг.КратностьВзаиморасчетов,
+	ДокументРеализацияТоваровУслуг.КурсВзаиморасчетов,
+	ДокументРеализацияТоваровУслуг.Организация,
+	ДокументРеализацияТоваровУслуг.Ответственный,
+	ДокументРеализацияТоваровУслуг.ОтражатьВБухгалтерскомУчете,
+	ДокументРеализацияТоваровУслуг.ОтражатьВУправленческомУчете,
+	ДокументРеализацияТоваровУслуг.Подразделение,
+	ДокументРеализацияТоваровУслуг.Проект,
+	ДокументРеализацияТоваровУслуг.Сделка,
+	ДокументРеализацияТоваровУслуг.Склад,
+	ДокументРеализацияТоваровУслуг.СуммаВключаетНДС,
+	ДокументРеализацияТоваровУслуг.СуммаДокумента,
+	ДокументРеализацияТоваровУслуг.СчетУчетаРасчетовПоАвансам,
+	ДокументРеализацияТоваровУслуг.СчетУчетаРасчетовПоТаре,
+	ДокументРеализацияТоваровУслуг.СчетУчетаРасчетовСКонтрагентом,
+	ДокументРеализацияТоваровУслуг.ТипЦен,
+	ДокументРеализацияТоваровУслуг.УчитыватьНДС,
+//	ДокументРеализацияТоваровУслуг.СтатьяПрочихДоходовРасходовПоТаре,
+//	ДокументРеализацияТоваровУслуг.СчетУчетаДоходовПоТареБУ,
+//	ДокументРеализацияТоваровУслуг.СчетУчетаДоходовПоТареНУ,
+//	ДокументРеализацияТоваровУслуг.СчетУчетаРасходовПоТареБУ,
+//	ДокументРеализацияТоваровУслуг.СчетУчетаРасходовПоТареНУ,
+	ДокументРеализацияТоваровУслуг.ОтпускРазрешил,
+	ДокументРеализацияТоваровУслуг.ОтпускПроизвел,
+	ДокументРеализацияТоваровУслуг.ДоверенностьНомер,
+	ДокументРеализацияТоваровУслуг.ДоверенностьДата,
+	ДокументРеализацияТоваровУслуг.ДоверенностьВыдана,
+//	ДокументРеализацияТоваровУслуг.ДоверенностьЧерезКого,
+	ДокументРеализацияТоваровУслуг.ОтключитьКонтрольВзаиморасчетов,
+	ДокументРеализацияТоваровУслуг.УсловиеПродаж,
+	ДокументРеализацияТоваровУслуг.ДополнениеКАдресуДоставки,
+	ДокументРеализацияТоваровУслуг.Товары,
+	ДокументРеализацияТоваровУслуг.ВозвратнаяТара,
+	ДокументРеализацияТоваровУслуг.Услуги,
+	ДокументРеализацияТоваровУслуг.СерийныеНомера,
+	ДокументРеализацияТоваровУслуг.СоставНабора,
+	ДокументРеализацияТоваровУслуг.ДокументыРасчетовСКонтрагентом,
+	ДокументРеализацияТоваровУслуг.СерийныеНомераСоставНабора,
+	ДокументРеализацияТоваровУслуг.МоментВремени
+ИЗ
+	Документ.РеализацияТоваровУслуг КАК ДокументРеализацияТоваровУслуг
+</QueryText>
+				<MainTable>Document.РеализацияТоваровУслуг</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">ВидОперации</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыОперацийРеализацияТоваров.ПродажаКомиссия</dcsset:right>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:groupType>OrGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:use>false</dcsset:use>
+								<dcsset:left xsi:type="dcscor:Field">ДоговорКонтрагента</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ДоговорыКонтрагентов.ПустаяСсылка</dcsset:right>
+								<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:use>false</dcsset:use>
+								<dcsset:left xsi:type="dcscor:Field">ДоговорКонтрагента.ВестиПоДокументамРасчетовСКонтрагентом</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+							</dcsset:item>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>Document.РеализацияТоваровУслуг.Command.ПечатьРеализацияТоваров</Command>
+				<Type>Auto</Type>
+				<CommandGroup>CommandGroup.Печать</CommandGroup>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Document.РеализацияТоваровУслуг.Command.ПечатьАктВыполненныхРабот</Command>
+				<Type>Auto</Type>
+				<CommandGroup>CommandGroup.Печать</CommandGroup>
+				<Index>1</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

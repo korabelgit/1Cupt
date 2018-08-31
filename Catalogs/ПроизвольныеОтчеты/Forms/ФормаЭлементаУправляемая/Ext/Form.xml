@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Родитель" id="3">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="19"/>
+		</InputField>
+		<InputField name="Описание" id="5">
+			<DataPath>Объект.Описание</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОписаниеКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="20"/>
+		</InputField>
+		<InputField name="ВидПроизвольногоОтчета" id="7">
+			<DataPath>Объект.ВидПроизвольногоОтчета</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидПроизвольногоОтчетаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВидПроизвольногоОтчетаРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<Table name="ИсточникиДанных" id="9">
+			<Representation>List</Representation>
+			<SkipOnInput>false</SkipOnInput>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ИсточникиДанных</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ИсточникиДанныхКонтекстноеМеню" id="10"/>
+			<AutoCommandBar name="ИсточникиДанныхКоманднаяПанель" id="11"/>
+			<ExtendedTooltip name="ИсточникиДанныхРасширеннаяПодсказка" id="22"/>
+			<SearchStringAddition name="ИсточникиДанныхСтрокаПоиска" id="23">
+				<AdditionSource>
+					<Item>ИсточникиДанных</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИсточникиДанныхСтрокаПоискаКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ИсточникиДанныхСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ИсточникиДанныхСостояниеПросмотра" id="26">
+				<AdditionSource>
+					<Item>ИсточникиДанных</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИсточникиДанныхСостояниеПросмотраКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="ИсточникиДанныхСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ИсточникиДанныхУправлениеПоиском" id="29">
+				<AdditionSource>
+					<Item>ИсточникиДанных</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ИсточникиДанныхУправлениеПоискомКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="ИсточникиДанныхУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ИсточникиДанныхНомерСтроки" id="12">
+					<DataPath>Объект.ИсточникиДанных.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИсточникиДанныхНомерСтрокиКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ИсточникиДанныхНомерСтрокиРасширеннаяПодсказка" id="32"/>
+				</LabelField>
+				<InputField name="ИсточникиДанныхНаборДанных" id="14">
+					<DataPath>Объект.ИсточникиДанных.НаборДанных</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИсточникиДанныхНаборДанныхКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ИсточникиДанныхНаборДанныхРасширеннаяПодсказка" id="33"/>
+				</InputField>
+				<InputField name="ИсточникиДанныхИмяИсточника" id="16">
+					<DataPath>Объект.ИсточникиДанных.ИмяИсточника</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИсточникиДанныхИмяИсточникаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ИсточникиДанныхИмяИсточникаРасширеннаяПодсказка" id="34"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПроизвольныеОтчеты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

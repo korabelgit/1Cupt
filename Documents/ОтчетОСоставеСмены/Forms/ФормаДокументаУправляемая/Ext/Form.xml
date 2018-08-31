@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ДанныеФорм</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnSaveDataInSettingsAtServer">ПриСохраненииДанныхВНастройкахНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ШапкаДокумента" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка документа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаДокументаРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<UsualGroup name="ИнформацияОСмене" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация о смене</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация о смене</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ИнформацияОСменеРасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<UsualGroup name="НомерДата" id="36">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер и дата</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер и дата</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="НомерДатаРасширеннаяПодсказка" id="61"/>
+							<ChildItems>
+								<InputField name="Номер" id="37">
+									<DataPath>Объект.Number</DataPath>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Wrap>false</Wrap>
+									<ContextMenu name="НомерКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="62"/>
+								</InputField>
+								<InputField name="Дата" id="39">
+									<DataPath>Объект.Date</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>от</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="63"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Смена" id="42">
+							<DataPath>Объект.Смена</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Width>25</Width>
+							<Wrap>false</Wrap>
+							<ContextMenu name="СменаКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="СменаРасширеннаяПодсказка" id="64"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="КонтекстДокумента" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контекст документа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контекст документа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="КонтекстДокументаРасширеннаяПодсказка" id="65"/>
+					<ChildItems>
+						<InputField name="Подразделение" id="52">
+							<DataPath>Объект.Подразделение</DataPath>
+							<Wrap>false</Wrap>
+							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="66"/>
+						</InputField>
+						<InputField name="Ответственный" id="54">
+							<DataPath>Объект.Ответственный</DataPath>
+							<Wrap>false</Wrap>
+							<ContextMenu name="ОтветственныйКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="67"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСоставСмены" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состав смены</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа состав смены</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаСоставСменыРасширеннаяПодсказка" id="68"/>
+			<ChildItems>
+				<Table name="СоставСмены" id="15">
+					<Representation>List</Representation>
+					<SkipOnInput>false</SkipOnInput>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.СоставСмены</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="СоставСменыКонтекстноеМеню" id="16"/>
+					<AutoCommandBar name="СоставСменыКоманднаяПанель" id="17">
+						<ChildItems>
+							<Popup name="СоставСменыЗаполнить" id="57">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Заполнить</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Состав смены заполнить</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="СоставСменыЗаполнитьРасширеннаяПодсказка" id="69"/>
+								<ChildItems>
+									<Button name="СоставСменыЗаполнитьСоставомТекущейСмены" id="58">
+										<Type>CommandBarButton</Type>
+										<SkipOnInput>false</SkipOnInput>
+										<CommandName>Form.Command.ЗаполнитьСоставомТекущейСмены</CommandName>
+										<ExtendedTooltip name="СоставСменыЗаполнитьСоставомТекущейСменыРасширеннаяПодсказка" id="70"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СоставСменыРасширеннаяПодсказка" id="71"/>
+					<SearchStringAddition name="СоставСменыСтрокаПоиска" id="72">
+						<AdditionSource>
+							<Item>СоставСмены</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СоставСменыСтрокаПоискаКонтекстноеМеню" id="73"/>
+						<ExtendedTooltip name="СоставСменыСтрокаПоискаРасширеннаяПодсказка" id="74"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СоставСменыСостояниеПросмотра" id="75">
+						<AdditionSource>
+							<Item>СоставСмены</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СоставСменыСостояниеПросмотраКонтекстноеМеню" id="76"/>
+						<ExtendedTooltip name="СоставСменыСостояниеПросмотраРасширеннаяПодсказка" id="77"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СоставСменыУправлениеПоиском" id="78">
+						<AdditionSource>
+							<Item>СоставСмены</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СоставСменыУправлениеПоискомКонтекстноеМеню" id="79"/>
+						<ExtendedTooltip name="СоставСменыУправлениеПоискомРасширеннаяПодсказка" id="80"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="BeforeAddRow">СоставСменыПередНачаломДобавления</Event>
+						<Event name="BeforeDeleteRow">СоставСменыПередУдалением</Event>
+						<Event name="OnActivateRow">СоставСменыПриАктивизацииСтроки</Event>
+						<Event name="ChoiceProcessing">СоставСменыОбработкаВыбора</Event>
+						<Event name="OnStartEdit">СоставСменыПриНачалеРедактирования</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="СоставСменыНомерСтроки" id="18">
+							<DataPath>Объект.СоставСмены.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>1</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Wrap>false</Wrap>
+							<ContextMenu name="СоставСменыНомерСтрокиКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="СоставСменыНомерСтрокиРасширеннаяПодсказка" id="81"/>
+						</InputField>
+						<InputField name="СоставСменыСотрудник" id="20">
+							<DataPath>Объект.СоставСмены.Сотрудник</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Wrap>false</Wrap>
+							<ContextMenu name="СоставСменыСотрудникКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="СоставСменыСотрудникРасширеннаяПодсказка" id="82"/>
+							<Events>
+								<Event name="OnChange">СоставСменыСотрудникПриИзменении</Event>
+								<Event name="StartChoice">СоставСменыСотрудникНачалоВыбора</Event>
+								<Event name="ChoiceProcessing">СоставСменыСотрудникОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<CheckBoxField name="СоставСменыЯвка" id="24">
+							<DataPath>Объект.СоставСмены.Явка</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СоставСменыЯвкаКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="СоставСменыЯвкаРасширеннаяПодсказка" id="83"/>
+							<Events>
+								<Event name="OnChange">СоставСменыЯвкаПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="СоставСменыВремяЯвки" id="26">
+							<DataPath>Объект.СоставСмены.ВремяЯвки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>3</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Wrap>false</Wrap>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ=ЧЧ:мм</v8:content>
+								</v8:item>
+							</Format>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ=ЧЧ:мм</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="СоставСменыВремяЯвкиКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="СоставСменыВремяЯвкиРасширеннаяПодсказка" id="84"/>
+						</InputField>
+						<InputField name="СоставСменыОтработанноеВремя" id="28">
+							<DataPath>Объект.СоставСмены.ОтработанноеВремя</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>3</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Wrap>false</Wrap>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ=ЧЧ:мм</v8:content>
+								</v8:item>
+							</Format>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ=ЧЧ:мм</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="СоставСменыОтработанноеВремяКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="СоставСменыОтработанноеВремяРасширеннаяПодсказка" id="85"/>
+						</InputField>
+						<InputField name="СоставСменыПримечание" id="30">
+							<DataPath>Объект.СоставСмены.Примечание</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Wrap>false</Wrap>
+							<ContextMenu name="СоставСменыПримечаниеКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="СоставСменыПримечаниеРасширеннаяПодсказка" id="86"/>
+						</InputField>
+						<InputField name="СоставСменыЗамещающийСотрудник" id="32">
+							<DataPath>Объект.СоставСмены.ЗамещающийСотрудник</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Wrap>false</Wrap>
+							<ContextMenu name="СоставСменыЗамещающийСотрудникКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="СоставСменыЗамещающийСотрудникРасширеннаяПодсказка" id="87"/>
+							<Events>
+								<Event name="OnChange">СоставСменыЗамещающийСотрудникПриИзменении</Event>
+								<Event name="StartChoice">СоставСменыЗамещающийСотрудникНачалоВыбора</Event>
+								<Event name="ChoiceProcessing">СоставСменыЗамещающийСотрудникОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Комментарий" id="11">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<Wrap>false</Wrap>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="88"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ОтчетОСоставеСмены</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+			<Save>
+				<Field>Объект.Смена</Field>
+				<Field>Объект.Подразделение</Field>
+				<Field>Объект.Ответственный</Field>
+				<Field>Объект.Комментарий</Field>
+				<Field>Объект.ГраницаСмены</Field>
+			</Save>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СоставСмены</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.СоставСмены.ПоГрафику</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:FieldAlternativeBackColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СоставСменыПримечание</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>СоставСменыСотрудник</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>СоставСменыЗамещающийСотрудник</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.СоставСмены.Явка</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:DarkRed</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:nil="true"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СоставСменыПримечание</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.СоставСмены.Явка</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.СоставСмены.Примечание</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">&lt;Причина неявки не указана&gt;</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьСоставомТекущейСмены" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить составом текущей смены</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить составом текущей смены</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнитьСоставомТекущейСмены</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>DocumentJournal.ДокументыМастераСмены.Command.СформироватьРегулярныеДокументы</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

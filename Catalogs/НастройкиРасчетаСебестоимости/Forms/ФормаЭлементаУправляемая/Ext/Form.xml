@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Родитель" id="3">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="35"/>
+		</InputField>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="Организация" id="5">
+			<DataPath>Объект.Организация</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="37"/>
+		</InputField>
+		<RadioButtonField name="ВидОтраженияВУчете" id="7">
+			<DataPath>Объект.ВидОтраженияВУчете</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отразить в</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>упр. учете</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ВидыОтраженияВУчете.EnumValue.ОтражатьВУправленческомУчете</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>регл. учете</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ВидыОтраженияВУчете.EnumValue.ОтражатьВРегламентированномУчете</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ВидОтраженияВУчетеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВидОтраженияВУчетеРасширеннаяПодсказка" id="38"/>
+			<Events>
+				<Event name="OnChange">ВидОтраженияВУчетеПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<Pages name="Страницы" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<Page name="СтраницаВыполняемыеДействия" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполняемые действия</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница выполняемые действия</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаВыполняемыеДействияРасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<Table name="ВыполняемыеДействия" id="17">
+							<Representation>List</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ВыполняемыеДействия</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВыполняемыеДействияКонтекстноеМеню" id="18"/>
+							<AutoCommandBar name="ВыполняемыеДействияКоманднаяПанель" id="19">
+								<ChildItems>
+									<Button name="ВыполняемыеДействияЗаполнитьСписокВыполняемыхДействий" id="34">
+										<Type>CommandBarButton</Type>
+										<SkipOnInput>false</SkipOnInput>
+										<CommandName>Form.Command.ЗаполнитьСписокВыполняемыхДействий</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ВыполняемыеДействияЗаполнитьСписокВыполняемыхДействийРасширеннаяПодсказка" id="41"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ВыполняемыеДействияРасширеннаяПодсказка" id="42"/>
+							<SearchStringAddition name="ВыполняемыеДействияСтрокаПоиска" id="43">
+								<AdditionSource>
+									<Item>ВыполняемыеДействия</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыполняемыеДействияСтрокаПоискаКонтекстноеМеню" id="44"/>
+								<ExtendedTooltip name="ВыполняемыеДействияСтрокаПоискаРасширеннаяПодсказка" id="45"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВыполняемыеДействияСостояниеПросмотра" id="46">
+								<AdditionSource>
+									<Item>ВыполняемыеДействия</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыполняемыеДействияСостояниеПросмотраКонтекстноеМеню" id="47"/>
+								<ExtendedTooltip name="ВыполняемыеДействияСостояниеПросмотраРасширеннаяПодсказка" id="48"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВыполняемыеДействияУправлениеПоиском" id="49">
+								<AdditionSource>
+									<Item>ВыполняемыеДействия</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВыполняемыеДействияУправлениеПоискомКонтекстноеМеню" id="50"/>
+								<ExtendedTooltip name="ВыполняемыеДействияУправлениеПоискомРасширеннаяПодсказка" id="51"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ВыполняемыеДействияВыполняемоеДействие" id="22">
+									<DataPath>Объект.ВыполняемыеДействия.ВыполняемоеДействие</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>false</ChoiceButton>
+									<ClearButton>false</ClearButton>
+									<SpinButton>false</SpinButton>
+									<OpenButton>false</OpenButton>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChoiceListButton>true</ChoiceListButton>
+									<ContextMenu name="ВыполняемыеДействияВыполняемоеДействиеКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ВыполняемыеДействияВыполняемоеДействиеРасширеннаяПодсказка" id="52"/>
+									<Events>
+										<Event name="StartListChoice">ВыполняемыеДействияВыполняемоеДействиеНачалоВыбораИзСписка</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаРасписание" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автоматическое выполнение</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница расписание</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаРасписаниеРасширеннаяПодсказка" id="53"/>
+					<ChildItems>
+						<CheckBoxField name="ФормироватьДокументыАвтоматически" id="9">
+							<DataPath>Объект.ФормироватьДокументыАвтоматически</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать расписание</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ФормироватьДокументыАвтоматическиКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="ФормироватьДокументыАвтоматическиРасширеннаяПодсказка" id="54"/>
+							<Events>
+								<Event name="OnChange">ФормироватьДокументыАвтоматическиПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<LabelDecoration name="ПредставлениеРасписания" id="27">
+							<HorizontalStretch>true</HorizontalStretch>
+							<SkipOnInput>false</SkipOnInput>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;Ввести расписание&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="ПредставлениеРасписанияКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ПредставлениеРасписанияРасширеннаяПодсказка" id="55"/>
+							<Events>
+								<Event name="Click">ПредставлениеРасписанияНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаРасчетЗаПредыдущийПериод" id="31">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа расчет за предыдущий период</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа расчет за предыдущий период</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасчетЗаПредыдущийПериодРасширеннаяПодсказка" id="56"/>
+							<ChildItems>
+								<CheckBoxField name="РасчитыватьСебестоимостьЗаПредыдущийПериод" id="29">
+									<DataPath>РасчитыватьСебестоимостьЗаПредыдущийПериод</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расчитывать за прошлый месяц:</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РасчитыватьСебестоимостьЗаПредыдущийПериодКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="РасчитыватьСебестоимостьЗаПредыдущийПериодРасширеннаяПодсказка" id="57"/>
+									<Events>
+										<Event name="OnChange">РасчитыватьСебестоимостьЗаПредыдущийПериодПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="Задержка" id="15">
+									<DataPath>Объект.Задержка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>месяц</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗадержкаКонтекстноеМеню" id="16"/>
+									<ExtendedTooltip name="ЗадержкаРасширеннаяПодсказка" id="58"/>
+									<Events>
+										<Event name="OnChange">ЗадержкаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="НадписьПояснениеЗадержка" id="32">
+							<SkipOnInput>false</SkipOnInput>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Надпись пояснение задержка</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьПояснениеЗадержкаКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="НадписьПояснениеЗадержкаРасширеннаяПодсказка" id="59"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Комментарий" id="13">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="60"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НастройкиРасчетаСебестоимости</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПредставлениеРасписания" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление расписания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Расписание" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ФормироватьДокументыАвтоматически" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формировать документы автоматически</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РасчитыватьСебестоимостьЗаПредыдущийПериод" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчитывать себестоимость за предыдущий период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВидОтраженияВУчетеОтражатьВУправленческомУчете" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид отражения в учете отражать в управленческом учете</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыОтраженияВУчете</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьСписокВыполняемыхДействий" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить список выполняемых действий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить список выполняемых действий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьСписокВыполняемыхДействий</Action>
+		</Command>
+	</Commands>
+</Form>

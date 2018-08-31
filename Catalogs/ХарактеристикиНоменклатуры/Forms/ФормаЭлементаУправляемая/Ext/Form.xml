@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Reread</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<Wrap>false</Wrap>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="25"/>
+		</InputField>
+		<CheckBoxField name="ОтечественныйНеподакцизныйТовар" id="16">
+			<DataPath>Объект.УДАЛИТЬОтечественныйНеподакцизныйТовар</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОтечественныйНеподакцизныйТоварКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ОтечественныйНеподакцизныйТоварРасширеннаяПодсказка" id="26"/>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаКодУТКВЭД" id="20">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКодУТКВЭДРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<InputField name="НоменклатураГТД" id="23">
+					<DataPath>Объект.НоменклатураГТД</DataPath>
+					<ContextMenu name="НоменклатураГТДКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="НоменклатураГТДРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<LabelDecoration name="НадписьОКодеУКТВЭД" id="21">
+					<Width>15</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<TextColor>style:FieldSelectionBackColor</TextColor>
+					<ContextMenu name="НадписьОКодеУКТВЭДКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="НадписьОКодеУКТВЭДРасширеннаяПодсказка" id="29"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="Активная" id="5">
+			<DataPath>Объект.Активная</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Активная характеристика</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="АктивнаяКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="АктивнаяРасширеннаяПодсказка" id="30"/>
+		</CheckBoxField>
+		<Table name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначения" id="7">
+			<ReadOnly>true</ReadOnly>
+			<SkipOnInput>false</SkipOnInput>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ОбработкаОбъектЗначенияСвойств.СвойстваИЗначения</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияКоманднаяПанель" id="9">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияРасширеннаяПодсказка" id="31"/>
+			<SearchStringAddition name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияСтрокаПоиска" id="32">
+				<AdditionSource>
+					<Item>ОбработкаОбъектЗначенияСвойствСвойстваИЗначения</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияСтрокаПоискаКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияСостояниеПросмотра" id="35">
+				<AdditionSource>
+					<Item>ОбработкаОбъектЗначенияСвойствСвойстваИЗначения</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияСостояниеПросмотраКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияУправлениеПоиском" id="38">
+				<AdditionSource>
+					<Item>ОбработкаОбъектЗначенияСвойствСвойстваИЗначения</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияУправлениеПоискомКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияПометкаУдаления" id="14">
+					<DataPath>ОбработкаОбъектЗначенияСвойств.СвойстваИЗначения.ПометкаУдаления</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияПометкаУдаленияКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияПометкаУдаленияРасширеннаяПодсказка" id="41"/>
+				</CheckBoxField>
+				<InputField name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияСвойство" id="10">
+					<DataPath>ОбработкаОбъектЗначенияСвойств.СвойстваИЗначения.Свойство</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияСвойствоКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияСвойствоРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияЗначение" id="12">
+					<DataPath>ОбработкаОбъектЗначенияСвойств.СвойстваИЗначения.Значение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияЗначениеКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ОбработкаОбъектЗначенияСвойствСвойстваИЗначенияЗначениеРасширеннаяПодсказка" id="43"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ХарактеристикиНоменклатуры</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ОбработкаОбъектЗначенияСвойств" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработка объект значения свойств</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЗначенияСвойствОбъекта</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.КомплектующиеНоменклатуры.StandardCommand.OpenByValue.ХарактеристикаНоменклатуры</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

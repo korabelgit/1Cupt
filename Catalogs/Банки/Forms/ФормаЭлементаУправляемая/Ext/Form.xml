@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Родитель" id="5">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="19"/>
+		</InputField>
+		<UsualGroup name="КорСчетБИК" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кор счет БИК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кор счет БИК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КорСчетБИКРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<InputField name="КоррСчет" id="7">
+					<DataPath>Объект.КоррСчет</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КоррСчетКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="КоррСчетРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>МФО</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="22"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="КодПоЕДРПОУ" id="16">
+			<DataPath>Объект.КодПоЕДРПОУ</DataPath>
+			<ContextMenu name="КодПоЕДРПОУКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="КодПоЕДРПОУРасширеннаяПодсказка" id="23"/>
+		</InputField>
+		<InputField name="Город" id="9">
+			<DataPath>Объект.Город</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ГородКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="Адрес" id="11">
+			<DataPath>Объект.Адрес</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="АдресКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="25"/>
+		</InputField>
+		<InputField name="Телефоны" id="13">
+			<DataPath>Объект.Телефоны</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТелефоныКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ТелефоныРасширеннаяПодсказка" id="26"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Банки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

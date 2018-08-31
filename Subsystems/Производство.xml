@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Subsystem uuid="e82d58b4-3c6c-406d-b4d1-d055eabd1b48">
+		<Properties>
+			<Name>Производство</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производство</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.ПодсистемаПроизводство</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.УправлениеПроизводством</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЭкономистЦеха</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеПланированием</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Номенклатура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Подразделения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Проекты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТехнологическиеОперации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыВоспроизводстваНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыРезервирования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыСписанияОстаткаТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.УДАЛИТЬВыпускПродукцииНалоговыйУчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ЗаданияНаВыпуск</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ЗаданияНаТехОперации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПартииТоваровНаСкладах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ChartOfCharacteristicTypes.ТипыШтрихкодов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВыпускПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УслугиСобственнымПодразделениям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ТребованиеНакладная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОприходованиеМатериаловИзПроизводства</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВыпускПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьМатериалыВПроизводстве</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ИнвентаризацияНЗП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОказаниеУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВыпускПродукцииСКД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.ДокументыПоПроизводству</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Склады</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СпецификацииНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПроизвольныеОтчеты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ГрафикиРаботыПоСменам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЗаказНаПроизводство</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>ЗаказыНаПроизводство</Subsystem>
+			<Subsystem>ОперативныйУчетПроизводства</Subsystem>
+			<Subsystem>ПланированиеПроизводства</Subsystem>
+			<Subsystem>ПланированиеПроизводстваПоСменам</Subsystem>
+			<Subsystem>УправлениеЗатратами</Subsystem>
+			<Subsystem>ФормированиеРегулярныхДокументов</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

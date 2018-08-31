@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<UsualGroup name="ГруппаРодительКод" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа родитель код</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа родитель код</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРодительКодРасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<InputField name="Родитель" id="5">
+					<DataPath>Объект.Parent</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РодительКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="26"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="27"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ХарактерЗатрат" id="11">
+			<DataPath>Объект.ХарактерЗатрат</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ХарактерЗатратКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ХарактерЗатратРасширеннаяПодсказка" id="28"/>
+			<Events>
+				<Event name="OnChange">ХарактерЗатратПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаВидСтатусЗатрат" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа вид статус затрат</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа вид статус затрат</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВидСтатусЗатратРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<InputField name="ВидЗатрат" id="7">
+					<DataPath>Объект.ВидЗатрат</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВидЗатратКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ВидЗатратРасширеннаяПодсказка" id="30"/>
+					<Events>
+						<Event name="OnChange">ВидЗатратПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СтатусМатериальныхЗатрат" id="9">
+					<DataPath>Объект.СтатусМатериальныхЗатрат</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СтатусМатериальныхЗатратКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="СтатусМатериальныхЗатратРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДопСвойстваЗатрат" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа доп свойства затрат</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа доп свойства затрат</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДопСвойстваЗатратРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<InputField name="Счет8Класса" id="13">
+					<DataPath>Объект.Счет8Класса</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<OpenButton>false</OpenButton>
+					<ContextMenu name="Счет8КлассаКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="Счет8КлассаРасширеннаяПодсказка" id="33"/>
+				</InputField>
+				<CheckBoxField name="ПостояннаяЗатрата" id="17">
+					<DataPath>Объект.ПостояннаяЗатрата</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПостояннаяЗатратаКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ПостояннаяЗатратаРасширеннаяПодсказка" id="34"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="СтатьяДекларацииПоНалогуНаПрибыль" id="20">
+			<DataPath>Объект.СтатьяДекларацииПоНалогуНаПрибыль</DataPath>
+			<ContextMenu name="СтатьяДекларацииПоНалогуНаПрибыльКонтекстноеМеню" id="21"/>
+			<ExtendedTooltip name="СтатьяДекларацииПоНалогуНаПрибыльРасширеннаяПодсказка" id="35"/>
+			<Events>
+				<Event name="OnChange">СтатьяДекларацииПоНалогуНаПрибыльПриИзменении</Event>
+			</Events>
+		</InputField>
+		<LabelField name="НадписьСправкаСтатья" id="22">
+			<DataPath>НадписьСправкаСтатья</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>None</TitleLocation>
+			<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+			<ContextMenu name="НадписьСправкаСтатьяКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="НадписьСправкаСтатьяРасширеннаяПодсказка" id="36"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СтатьиЗатрат</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="НадписьСправкаСтатья" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Надпись справка статья</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

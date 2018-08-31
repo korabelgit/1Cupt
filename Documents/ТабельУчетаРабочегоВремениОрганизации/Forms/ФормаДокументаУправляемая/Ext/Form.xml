@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаДатаНомер" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДатаНомерРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Организация" id="5">
+			<DataPath>Объект.Организация</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="29"/>
+		</InputField>
+		<InputField name="ПодразделениеОрганизации" id="9">
+			<DataPath>Объект.ПодразделениеОрганизации</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПодразделениеОрганизацииКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ПодразделениеОрганизацииРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="ПериодРегистрации" id="7">
+			<DataPath>ПериодСтрока</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<EditFormat>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДФ=</v8:content>
+				</v8:item>
+			</EditFormat>
+			<ContextMenu name="ПериодРегистрацииКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПериодРегистрацииРасширеннаяПодсказка" id="31"/>
+		</InputField>
+		<InputField name="СпособУказанияПериода" id="19">
+			<DataPath>Объект.СпособУказанияПериода</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СпособУказанияПериодаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="СпособУказанияПериодаРасширеннаяПодсказка" id="32"/>
+		</InputField>
+		<InputField name="ДатаНачалаПериода" id="21">
+			<DataPath>Объект.ДатаНачалаПериода</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаНачалаПериодаКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ДатаНачалаПериодаРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<InputField name="ДатаОкончанияПериода" id="23">
+			<DataPath>Объект.ДатаОкончанияПериода</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаОкончанияПериодаКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="ДатаОкончанияПериодаРасширеннаяПодсказка" id="34"/>
+		</InputField>
+		<InputField name="СпособВводаДанных" id="17">
+			<DataPath>Объект.СпособВводаДанных</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СпособВводаДанныхКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="СпособВводаДанныхРасширеннаяПодсказка" id="35"/>
+		</InputField>
+		<InputField name="Ответственный" id="11">
+			<DataPath>Объект.Ответственный</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="Комментарий" id="13">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="37"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ТабельУчетаРабочегоВремениОрганизации</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ПериодСтрока" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период строка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

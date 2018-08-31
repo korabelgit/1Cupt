@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Родитель" id="3">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="13"/>
+		</InputField>
+		<Table name="СогласующиеЛица" id="5">
+			<Representation>List</Representation>
+			<SkipOnInput>false</SkipOnInput>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.СогласующиеЛица</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СогласующиеЛицаКонтекстноеМеню" id="6"/>
+			<AutoCommandBar name="СогласующиеЛицаКоманднаяПанель" id="7"/>
+			<ExtendedTooltip name="СогласующиеЛицаРасширеннаяПодсказка" id="14"/>
+			<SearchStringAddition name="СогласующиеЛицаСтрокаПоиска" id="15">
+				<AdditionSource>
+					<Item>СогласующиеЛица</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СогласующиеЛицаСтрокаПоискаКонтекстноеМеню" id="16"/>
+				<ExtendedTooltip name="СогласующиеЛицаСтрокаПоискаРасширеннаяПодсказка" id="17"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СогласующиеЛицаСостояниеПросмотра" id="18">
+				<AdditionSource>
+					<Item>СогласующиеЛица</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СогласующиеЛицаСостояниеПросмотраКонтекстноеМеню" id="19"/>
+				<ExtendedTooltip name="СогласующиеЛицаСостояниеПросмотраРасширеннаяПодсказка" id="20"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СогласующиеЛицаУправлениеПоиском" id="21">
+				<AdditionSource>
+					<Item>СогласующиеЛица</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СогласующиеЛицаУправлениеПоискомКонтекстноеМеню" id="22"/>
+				<ExtendedTooltip name="СогласующиеЛицаУправлениеПоискомРасширеннаяПодсказка" id="23"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СогласующиеЛицаНомерСтроки" id="8">
+					<DataPath>Объект.СогласующиеЛица.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СогласующиеЛицаНомерСтрокиКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="СогласующиеЛицаНомерСтрокиРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<InputField name="СогласующиеЛицаПользователь" id="10">
+					<DataPath>Объект.СогласующиеЛица.Пользователь</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СогласующиеЛицаПользовательКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="СогласующиеЛицаПользовательРасширеннаяПодсказка" id="25"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.МаршрутыСогласования</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

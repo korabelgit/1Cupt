@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CheckBoxField name="НеИспользовать" id="20">
+			<DataPath>Объект.НеИспользовать</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НеИспользоватьКонтекстноеМеню" id="21"/>
+			<ExtendedTooltip name="НеИспользоватьРасширеннаяПодсказка" id="24"/>
+		</CheckBoxField>
+		<InputField name="ТипОборудования" id="7">
+			<DataPath>Объект.ТипОборудования</DataPath>
+			<Wrap>false</Wrap>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ТипыПодключаемогоОборудования.EnumValue.СканерШтрихкода</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ТипыПодключаемогоОборудования.EnumValue.СчитывательМагнитныхКарт</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ТипыПодключаемогоОборудования.EnumValue.ДисплейПокупателя</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ТипыПодключаемогоОборудования.EnumValue.ТерминалСбораДанных</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ТипыПодключаемогоОборудования.EnumValue.ЭлектронныеВесы</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ТипыПодключаемогоОборудования.EnumValue.ВесыСПечатьюЭтикеток</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ТипОборудованияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ТипОборудованияРасширеннаяПодсказка" id="25"/>
+			<Events>
+				<Event name="ChoiceProcessing">ТипОборудованияОбработкаВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="ОбработчикДрайвера" id="18">
+			<DataPath>Объект.ОбработчикДрайвера</DataPath>
+			<Wrap>false</Wrap>
+			<ChoiceButton>false</ChoiceButton>
+			<OpenButton>false</OpenButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ChooseType>false</ChooseType>
+			<TextEdit>false</TextEdit>
+			<AvailableTypes>
+				<v8:Type>cfg:EnumRef.ОбработчикиДрайверовПодключаемогоОборудования</v8:Type>
+			</AvailableTypes>
+			<ChoiceListButton>true</ChoiceListButton>
+			<ContextMenu name="ОбработчикДрайвераКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="ОбработчикДрайвераРасширеннаяПодсказка" id="26"/>
+			<Events>
+				<Event name="ChoiceProcessing">ИмяОбработчикаОбработкаВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="Модель" id="22">
+			<DataPath>Объект.Модель</DataPath>
+			<Enabled>false</Enabled>
+			<ChoiceButton>false</ChoiceButton>
+			<OpenButton>false</OpenButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChooseType>false</ChooseType>
+			<TextEdit>false</TextEdit>
+			<ChoiceListButton>true</ChoiceListButton>
+			<ContextMenu name="МодельКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="МодельРасширеннаяПодсказка" id="27"/>
+			<Events>
+				<Event name="ChoiceProcessing">МодельОбработкаВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="РабочееМесто" id="9">
+			<DataPath>Объект.РабочееМесто</DataPath>
+			<Wrap>false</Wrap>
+			<ContextMenu name="РабочееМестоКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="РабочееМестоРасширеннаяПодсказка" id="28"/>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<Wrap>false</Wrap>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="29"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПодключаемоеОборудование</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СоответствиеТиповОборудования" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Соответствие типов оборудования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.ПодключаемоеОборудованиеПоРабочимМестам.StandardCommand.OpenByValue.Устройство</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="НомерИВидСчета" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер и вид счета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер и вид счета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НомерИВидСчетаРасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<InputField name="НомерСчета" id="1">
+					<DataPath>Объект.НомерСчета</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерСчетаКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерСчетаРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<InputField name="ВидСчета" id="3">
+					<DataPath>Объект.ВидСчета</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Текущий</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Текущий</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Депозитный</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Депозитный</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Ссудный</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Ссудный</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Иной</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Иной</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ChoiceListButton>true</ChoiceListButton>
+					<ContextMenu name="ВидСчетаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ВидСчетаРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ВалютаДенежныхСредств" id="5">
+					<DataPath>Объект.ВалютаДенежныхСредств</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<OpenButton>false</OpenButton>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ВалютаДенежныхСредствКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ВалютаДенежныхСредствРасширеннаяПодсказка" id="20"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Банк" id="13">
+			<DataPath>Объект.Банк</DataPath>
+			<ContextMenu name="БанкКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="БанкРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<UsualGroup name="СведенияОБанке" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения о банке</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения о банке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СведенияОБанкеРасширеннаяПодсказка" id="22"/>
+			<ChildItems>
+				<InputField name="БанкКод" id="9">
+					<DataPath>Объект.Банк.Code</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>МФО</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="БанкКодКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="БанкКодРасширеннаяПодсказка" id="23"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Наименование" id="15">
+			<DataPath>Объект.Description</DataPath>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="24"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.БанковскиеСчета</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,603 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Родитель" id="3">
+			<DataPath>Объект.Parent</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настроек</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="64"/>
+		</InputField>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="65"/>
+		</InputField>
+		<UsualGroup name="ПодразделениеПериод" id="43">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПодразделениеПериодРасширеннаяПодсказка" id="66"/>
+			<ChildItems>
+				<InputField name="Подразделение" id="7">
+					<DataPath>Объект.Подразделение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПодразделениеКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="67"/>
+					<Events>
+						<Event name="OnChange">ПодразделениеПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДатаНачалаОбработки" id="41">
+					<DataPath>ДатаНачалаОбработки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начиная с</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата начала обработки данных</v8:content>
+						</v8:item>
+					</ToolTip>
+					<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+					<WarningOnEdit>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата, начиная с которой обрабатываются данные, изменяется автоматически. Изменение этой даты вручную может привести к ошибкам при формировании документов</v8:content>
+						</v8:item>
+					</WarningOnEdit>
+					<ContextMenu name="ДатаНачалаОбработкиКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ДатаНачалаОбработкиРасширеннаяПодсказка" id="68"/>
+					<Events>
+						<Event name="StartChoice">ДатаНачалаОбработкиНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="НеОбрабатыватьПериодДоЗавершенияСмен" id="29">
+			<DataPath>Объект.НеОбрабатыватьПериодДоЗавершенияСмен</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не обрабатывать период до завершения смен </v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не обрабатывать период до границы завершенных смен (регистр сведений "Завершенные смены")</v8:content>
+				</v8:item>
+			</ToolTip>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НеОбрабатыватьПериодДоЗавершенияСменКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="НеОбрабатыватьПериодДоЗавершенияСменРасширеннаяПодсказка" id="69"/>
+		</CheckBoxField>
+		<Pages name="Страницы" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="70"/>
+			<ChildItems>
+				<Page name="СтраницаСоздаватьДокументы" id="45">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Создавать документы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Создавать документы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаСоздаватьДокументыРасширеннаяПодсказка" id="71"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаГоризонтальноеРаспределение" id="62">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа горизонтальное распределение</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа горизонтальное распределение</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаГоризонтальноеРаспределениеРасширеннаяПодсказка" id="72"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаВертикальноеРаспределениеЛевая" id="60">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа вертикальное распределение левая</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа вертикальное распределение левая</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВертикальноеРаспределениеЛеваяРасширеннаяПодсказка" id="73"/>
+									<ChildItems>
+										<InputField name="ВидРегулярногоДокумента" id="11">
+											<DataPath>Объект.ВидРегулярногоДокумента</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Вид</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ChoiceButton>true</ChoiceButton>
+											<ClearButton>false</ClearButton>
+											<SpinButton>false</SpinButton>
+											<OpenButton>false</OpenButton>
+											<ListChoiceMode>true</ListChoiceMode>
+											<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+											<QuickChoice>true</QuickChoice>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="ВидРегулярногоДокументаКонтекстноеМеню" id="12"/>
+											<ExtendedTooltip name="ВидРегулярногоДокументаРасширеннаяПодсказка" id="74"/>
+											<Events>
+												<Event name="OnChange">ВидРегулярногоДокументаПриИзменении</Event>
+												<Event name="Clearing">ВидРегулярногоДокументаОчистка</Event>
+											</Events>
+										</InputField>
+										<InputField name="ПериодДетализации" id="9">
+											<DataPath>Объект.ПериодДетализации</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Периодичность</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ListChoiceMode>true</ListChoiceMode>
+											<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+											<QuickChoice>true</QuickChoice>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.День</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.Неделя</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation/>
+														<Value xsi:type="xr:DesignTimeRef">Enum.Периодичность.EnumValue.Месяц</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ПериодДетализацииКонтекстноеМеню" id="10"/>
+											<ExtendedTooltip name="ПериодДетализацииРасширеннаяПодсказка" id="75"/>
+											<Events>
+												<Event name="Clearing">ПериодДетализацииОчистка</Event>
+											</Events>
+										</InputField>
+										<InputField name="Организация" id="13">
+											<DataPath>Объект.Организация</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="ОрганизацияКонтекстноеМеню" id="14"/>
+											<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="76"/>
+											<Events>
+												<Event name="OnChange">ОрганизацияПриИзменении</Event>
+											</Events>
+										</InputField>
+										<UsualGroup name="ГруппаВыпускМатериалы" id="51">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа выпуск материалы</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа выпуск материалы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаВыпускМатериалыРасширеннаяПодсказка" id="77"/>
+											<ChildItems>
+												<LabelDecoration name="НадписьОтразить" id="52">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заполнить: </v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьОтразитьКонтекстноеМеню" id="53"/>
+													<ExtendedTooltip name="НадписьОтразитьРасширеннаяПодсказка" id="78"/>
+												</LabelDecoration>
+												<CheckBoxField name="ОтразитьВыпуск" id="25">
+													<DataPath>Объект.ОтразитьВыпуск</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Выпуск</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ОтразитьВыпускКонтекстноеМеню" id="26"/>
+													<ExtendedTooltip name="ОтразитьВыпускРасширеннаяПодсказка" id="79"/>
+												</CheckBoxField>
+												<CheckBoxField name="ОтразитьМатериалы" id="27">
+													<DataPath>Объект.ОтразитьМатериалы</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Материалы</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ОтразитьМатериалыКонтекстноеМеню" id="28"/>
+													<ExtendedTooltip name="ОтразитьМатериалыРасширеннаяПодсказка" id="80"/>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаВертикальноеРаспределениеПравая" id="61">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа вертикальное распределение правая</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа вертикальное распределение правая</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВертикальноеРаспределениеПраваяРасширеннаяПодсказка" id="81"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаОтражениеВУчете" id="63">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа отражение в учете</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа отражение в учете</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОтражениеВУчетеРасширеннаяПодсказка" id="82"/>
+											<ChildItems>
+												<LabelDecoration name="НадписьОтраженияВУчете" id="47">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отразить в:</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьОтраженияВУчетеКонтекстноеМеню" id="48"/>
+													<ExtendedTooltip name="НадписьОтраженияВУчетеРасширеннаяПодсказка" id="83"/>
+												</LabelDecoration>
+												<CheckBoxField name="ОтражатьВУправленческомУчете" id="19">
+													<DataPath>Объект.ОтражатьВУправленческомУчете</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>упр. учете</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ОтражатьВУправленческомУчетеКонтекстноеМеню" id="20"/>
+													<ExtendedTooltip name="ОтражатьВУправленческомУчетеРасширеннаяПодсказка" id="84"/>
+												</CheckBoxField>
+												<CheckBoxField name="ОтражатьВБухгалтерскомУчете" id="21">
+													<DataPath>Объект.ОтражатьВБухгалтерскомУчете</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>бух. учете</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ОтражатьВБухгалтерскомУчетеКонтекстноеМеню" id="22"/>
+													<ExtendedTooltip name="ОтражатьВБухгалтерскомУчетеРасширеннаяПодсказка" id="85"/>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+										<InputField name="Склад" id="17">
+											<DataPath>Объект.Склад</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="СкладКонтекстноеМеню" id="18"/>
+											<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="86"/>
+										</InputField>
+										<InputField name="ПодразделениеОрганизации" id="15">
+											<DataPath>Объект.ПодразделениеОрганизации</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подразделение организации</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПодразделениеОрганизацииКонтекстноеМеню" id="16"/>
+											<ExtendedTooltip name="ПодразделениеОрганизацииРасширеннаяПодсказка" id="87"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаРасписание" id="54">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расписание</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница расписание</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаРасписаниеРасширеннаяПодсказка" id="88"/>
+					<ChildItems>
+						<CheckBoxField name="ФормироватьДокументыАвтоматически" id="31">
+							<DataPath>Объект.ФормироватьДокументыАвтоматически</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать расписание</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ФормироватьДокументыАвтоматическиКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ФормироватьДокументыАвтоматическиРасширеннаяПодсказка" id="89"/>
+							<Events>
+								<Event name="OnChange">ФормироватьДокументыАвтоматическиПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<LabelDecoration name="ПредставлениеРасписания" id="55">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;Ввести расписание&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="ПредставлениеРасписанияКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="ПредставлениеРасписанияРасширеннаяПодсказка" id="90"/>
+							<Events>
+								<Event name="Click">ПредставлениеРасписанияНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаНеОбрабатыватьВсеДокументы" id="57">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа не обрабатывать все документы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа не обрабатывать все документы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНеОбрабатыватьВсеДокументыРасширеннаяПодсказка" id="91"/>
+							<ChildItems>
+								<CheckBoxField name="НеОбрабатыватьВсеДокументы" id="39">
+									<DataPath>Объект.НеОбрабатыватьВсеДокументы</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Не обрабатывать документы за предыдущие: </v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеОбрабатыватьВсеДокументыКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="НеОбрабатыватьВсеДокументыРасширеннаяПодсказка" id="92"/>
+									<Events>
+										<Event name="OnChange">НеОбрабатыватьВсеДокументыПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="Задержка" id="35">
+									<DataPath>Объект.Задержка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>дней</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗадержкаКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ЗадержкаРасширеннаяПодсказка" id="93"/>
+									<Events>
+										<Event name="OnChange">ЗадержкаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="НадписьПояснениеЗадержка" id="58">
+							<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Надпись пояснение задержка</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьПояснениеЗадержкаКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="НадписьПояснениеЗадержкаРасширеннаяПодсказка" id="94"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="ГраницаОбработки" id="5">
+			<DataPath>Объект.ГраницаОбработки</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ГраницаОбработкиКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ГраницаОбработкиРасширеннаяПодсказка" id="95"/>
+		</InputField>
+		<InputField name="РегламентноеЗадание" id="33">
+			<DataPath>Объект.РегламентноеЗадание</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РегламентноеЗаданиеКонтекстноеМеню" id="34"/>
+			<ExtendedTooltip name="РегламентноеЗаданиеРасширеннаяПодсказка" id="96"/>
+		</InputField>
+		<InputField name="Комментарий" id="37">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="97"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НастройкиФормированияДокументовВыпускаПродукции</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДатаНачалаОбработки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ФормироватьДокументыАвтоматически" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формировать документы автоматически</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеРасписания" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление расписания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Расписание" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+</Form>

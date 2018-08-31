@@ -1,0 +1,1706 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьДанные" id="306">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаписатьДанные</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.Выполнить</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаЗаписатьДанныеРасширеннаяПодсказка" id="307"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ВидИзделия" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид изделия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид изделия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ВидИзделияРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<InputField name="СправочникОбъектВидИзделия" id="5">
+					<DataPath>СправочникОбъект.ВидИзделия</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="СправочникОбъектВидИзделияКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="СправочникОбъектВидИзделияРасширеннаяПодсказка" id="7"/>
+					<Events>
+						<Event name="OnChange">СправочникОбъектВидИзделияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelField name="Наименование" id="59">
+					<DataPath>Наименование</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>+++</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>None</TitleLocation>
+					<TextColor>#0000FF</TextColor>
+					<Font ref="style:TextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="61"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="СтраницаДверноеПолотно" id="1">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница дверное полотно</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница дверное полотно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницаДверноеПолотноРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="ГруппаПараметров" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметров</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметров</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПараметровРасширеннаяПодсказка" id="12"/>
+					<ChildItems>
+						<InputField name="СправочникОбъектМодель" id="8">
+							<DataPath>СправочникОбъект.Модель</DataPath>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="СправочникОбъектМодельКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="СправочникОбъектМодельРасширеннаяПодсказка" id="10"/>
+							<Events>
+								<Event name="OnChange">СправочникОбъектМодельПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="СправочникОбъектНаправление" id="13">
+							<DataPath>СправочникОбъект.Направление</DataPath>
+							<ContextMenu name="СправочникОбъектНаправлениеКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="СправочникОбъектНаправлениеРасширеннаяПодсказка" id="15"/>
+							<Events>
+								<Event name="OnChange">СправочникОбъектНаправлениеПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаНестандарт" id="18">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНестандартРасширеннаяПодсказка" id="19"/>
+							<ChildItems>
+								<CheckBoxField name="СправочникОбъектНестандарт" id="38">
+									<DataPath>СправочникОбъект.Нестандарт</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СправочникОбъектНестандартКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="СправочникОбъектНестандартРасширеннаяПодсказка" id="40"/>
+									<Events>
+										<Event name="OnChange">НестандартПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<UsualGroup name="Группа2" id="36">
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="37"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаРазмеры" id="16">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа размеры</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа размеры</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРазмерыРасширеннаяПодсказка" id="17"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаНестандартИстина" id="23">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа нестандарт истина</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа нестандарт истина</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаНестандартИстинаРасширеннаяПодсказка" id="24"/>
+													<ChildItems>
+														<InputField name="СправочникОбъектШирина" id="25">
+															<DataPath>СправочникОбъект.Ширина</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ширина (мм)</v8:content>
+																</v8:item>
+															</Title>
+															<ChoiceParameterLinks>
+																<xr:Link>
+																	<xr:Name>Отбор.Владелец</xr:Name>
+																	<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+																	<xr:ValueChange>Clear</xr:ValueChange>
+																</xr:Link>
+															</ChoiceParameterLinks>
+															<ContextMenu name="СправочникОбъектШиринаКонтекстноеМеню" id="26"/>
+															<ExtendedTooltip name="СправочникОбъектШиринаРасширеннаяПодсказка" id="27"/>
+															<Events>
+																<Event name="OnChange">СправочникОбъектШиринаПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="СправочникОбъектВысота" id="28">
+															<DataPath>СправочникОбъект.Высота</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Высота (мм)</v8:content>
+																</v8:item>
+															</Title>
+															<ChoiceParameterLinks>
+																<xr:Link>
+																	<xr:Name>Отбор.Владелец</xr:Name>
+																	<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+																	<xr:ValueChange>Clear</xr:ValueChange>
+																</xr:Link>
+															</ChoiceParameterLinks>
+															<ContextMenu name="СправочникОбъектВысотаКонтекстноеМеню" id="29"/>
+															<ExtendedTooltip name="СправочникОбъектВысотаРасширеннаяПодсказка" id="30"/>
+															<Events>
+																<Event name="OnChange">СправочникОбъектВысотаПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="СправочникОбъектТолщина" id="31">
+															<DataPath>СправочникОбъект.Толщина</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Толщина (мм)</v8:content>
+																</v8:item>
+															</Title>
+															<ChoiceParameterLinks>
+																<xr:Link>
+																	<xr:Name>Отбор.Владелец</xr:Name>
+																	<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+																	<xr:ValueChange>Clear</xr:ValueChange>
+																</xr:Link>
+															</ChoiceParameterLinks>
+															<ContextMenu name="СправочникОбъектТолщинаКонтекстноеМеню" id="32"/>
+															<ExtendedTooltip name="СправочникОбъектТолщинаРасширеннаяПодсказка" id="33"/>
+															<Events>
+																<Event name="OnChange">СправочникОбъектТолщинаПриИзменении</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ВидПокрытия" id="41">
+							<DataPath>СправочникОбъект.ВидПокрытия</DataPath>
+							<ContextMenu name="ВидПокрытияКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="ВидПокрытияРасширеннаяПодсказка" id="43"/>
+						</InputField>
+						<InputField name="Декор" id="44">
+							<DataPath>СправочникОбъект.Декор</DataPath>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидПокрытия</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="ДекорКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ДекорРасширеннаяПодсказка" id="46"/>
+						</InputField>
+						<InputField name="Стекло" id="47">
+							<DataPath>СправочникОбъект.Стекло</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Остекленение</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СтеклоКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="СтеклоРасширеннаяПодсказка" id="49"/>
+						</InputField>
+						<InputField name="Фурнитура" id="50">
+							<DataPath>СправочникОбъект.Фурнитура</DataPath>
+							<ContextMenu name="ФурнитураКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="ФурнитураРасширеннаяПодсказка" id="52"/>
+						</InputField>
+						<InputField name="Герметизация" id="53">
+							<DataPath>СправочникОбъект.Герметизация</DataPath>
+							<ContextMenu name="ГерметизацияКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ГерметизацияРасширеннаяПодсказка" id="55"/>
+						</InputField>
+						<InputField name="Кромка" id="56">
+							<DataPath>СправочникОбъект.Кромка</DataPath>
+							<ContextMenu name="КромкаКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="КромкаРасширеннаяПодсказка" id="58"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<Pages name="СтраницаАрка" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница арка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница арка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>None</ToolTipRepresentation>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницаАркаРасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<Page name="ГруппаПараметровАрка" id="67">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметров арка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметров арка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ГруппаПараметровАркаРасширеннаяПодсказка" id="68"/>
+					<ChildItems>
+						<InputField name="Модель" id="64">
+							<DataPath>СправочникОбъект.Модель</DataPath>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="МодельКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="МодельРасширеннаяПодсказка" id="66"/>
+							<Events>
+								<Event name="OnChange">МодельПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаНестандартАрка" id="69">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт арка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт арка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНестандартАркаРасширеннаяПодсказка" id="70"/>
+							<ChildItems>
+								<CheckBoxField name="Нестандарт" id="71">
+									<DataPath>СправочникОбъект.Нестандарт</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НестандартКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="НестандартРасширеннаяПодсказка" id="73"/>
+									<Events>
+										<Event name="OnChange">НестандартАркаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="Ширина" id="74">
+									<DataPath>СправочникОбъект.Ширина</DataPath>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ШиринаКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="ШиринаРасширеннаяПодсказка" id="76"/>
+									<Events>
+										<Event name="OnChange">ШиринаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Толщина" id="77">
+									<DataPath>СправочникОбъект.Толщина</DataPath>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ТолщинаКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="ТолщинаРасширеннаяПодсказка" id="79"/>
+									<Events>
+										<Event name="OnChange">ТолщинаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Высота" id="80">
+									<DataPath>СправочникОбъект.Высота</DataPath>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ВысотаКонтекстноеМеню" id="81"/>
+									<ExtendedTooltip name="ВысотаРасширеннаяПодсказка" id="82"/>
+									<Events>
+										<Event name="OnChange">ВысотаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ВидПокрытияАрка" id="83">
+							<DataPath>СправочникОбъект.ВидПокрытия</DataPath>
+							<ContextMenu name="ВидПокрытияАркаКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="ВидПокрытияАркаРасширеннаяПодсказка" id="85"/>
+							<Events>
+								<Event name="OnChange">ВидПокрытияАркаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ДекорАрка" id="86">
+							<DataPath>СправочникОбъект.Декор</DataPath>
+							<ContextMenu name="ДекорАркаКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="ДекорАркаРасширеннаяПодсказка" id="88"/>
+							<Events>
+								<Event name="OnChange">ДекорАркаПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<Pages name="СтраницаКапитель" id="89">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница капитель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница капитель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницаКапительРасширеннаяПодсказка" id="90"/>
+			<ChildItems>
+				<Page name="ГруппаПараметрыКапитель" id="91">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры капитель</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры капитель</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПараметрыКапительРасширеннаяПодсказка" id="92"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНестандартКапитель" id="105">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт капитель</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт капитель</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНестандартКапительРасширеннаяПодсказка" id="106"/>
+							<ChildItems>
+								<CheckBoxField name="НестандартКапитель" id="93">
+									<DataPath>СправочникОбъект.Нестандарт</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НестандартКапительКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="НестандартКапительРасширеннаяПодсказка" id="95"/>
+									<Events>
+										<Event name="OnChange">НестандартКапительПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ВысотаКапитель" id="99">
+									<DataPath>СправочникОбъект.Высота</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Длина (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ВысотаКапительКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="ВысотаКапительРасширеннаяПодсказка" id="101"/>
+									<Events>
+										<Event name="OnChange">ВысотаКапительПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ШиринаКапитель" id="96">
+									<DataPath>СправочникОбъект.Ширина</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ширина (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ШиринаКапительКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="ШиринаКапительРасширеннаяПодсказка" id="98"/>
+									<Events>
+										<Event name="OnChange">ШиринаКапительПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ВидПокрытияКапитель" id="102">
+							<DataPath>СправочникОбъект.ВидПокрытия</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип покрытия</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВидПокрытияКапительКонтекстноеМеню" id="103"/>
+							<ExtendedTooltip name="ВидПокрытияКапительРасширеннаяПодсказка" id="104"/>
+							<Events>
+								<Event name="OnChange">ВидПокрытияКапительПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ДекорКапитель" id="107">
+							<DataPath>СправочникОбъект.Декор</DataPath>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидПокрытия</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="ДекорКапительКонтекстноеМеню" id="108"/>
+							<ExtendedTooltip name="ДекорКапительРасширеннаяПодсказка" id="109"/>
+							<Events>
+								<Event name="OnChange">ДекорКапительПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<Pages name="СтраницаКоробка" id="110">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница коробка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница коробка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницаКоробкаРасширеннаяПодсказка" id="111"/>
+			<ChildItems>
+				<Page name="ГруппаПараметрыКоробка" id="112">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры коробка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры коробка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПараметрыКоробкаРасширеннаяПодсказка" id="113"/>
+					<ChildItems>
+						<InputField name="Видматериала" id="116">
+							<DataPath>СправочникОбъект.Видматериала</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид материала</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВидматериалаКонтекстноеМеню" id="117"/>
+							<ExtendedTooltip name="ВидматериалаРасширеннаяПодсказка" id="118"/>
+							<Events>
+								<Event name="OnChange">ВидматериалаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТипКоробки" id="119">
+							<DataPath>СправочникОбъект.ТипКоробки</DataPath>
+							<ContextMenu name="ТипКоробкиКонтекстноеМеню" id="120"/>
+							<ExtendedTooltip name="ТипКоробкиРасширеннаяПодсказка" id="121"/>
+							<Events>
+								<Event name="OnChange">ТипКоробкиПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаНестандартКоробка" id="114">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт коробка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт коробка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНестандартКоробкаРасширеннаяПодсказка" id="115"/>
+							<ChildItems>
+								<CheckBoxField name="НестандартКоробка" id="124">
+									<DataPath>СправочникОбъект.Нестандарт</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НестандартКоробкаКонтекстноеМеню" id="125"/>
+									<ExtendedTooltip name="НестандартКоробкаРасширеннаяПодсказка" id="126"/>
+									<Events>
+										<Event name="OnChange">НестандартКоробкаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ШиринаКоробка" id="127">
+									<DataPath>СправочникОбъект.Ширина</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ширина (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ШиринаКоробкаКонтекстноеМеню" id="128"/>
+									<ExtendedTooltip name="ШиринаКоробкаРасширеннаяПодсказка" id="129"/>
+									<Events>
+										<Event name="OnChange">ШиринаКоробкаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТолщинаКоробка" id="133">
+									<DataPath>СправочникОбъект.Толщина</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Толщина (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ТолщинаКоробкаКонтекстноеМеню" id="134"/>
+									<ExtendedTooltip name="ТолщинаКоробкаРасширеннаяПодсказка" id="135"/>
+									<Events>
+										<Event name="OnChange">ТолщинаКоробкаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВысотаКоробка" id="130">
+									<DataPath>СправочникОбъект.Высота</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Высота (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ВысотаКоробкаКонтекстноеМеню" id="131"/>
+									<ExtendedTooltip name="ВысотаКоробкаРасширеннаяПодсказка" id="132"/>
+									<Events>
+										<Event name="OnChange">ВысотаКоробкаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНестандартКоробка2" id="122">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт коробка2</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт коробка2</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНестандартКоробка2РасширеннаяПодсказка" id="123"/>
+							<ChildItems>
+								<InputField name="Поперечка" id="136">
+									<DataPath>СправочникОбъект.Поперечка</DataPath>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ПоперечкаКонтекстноеМеню" id="137"/>
+									<ExtendedTooltip name="ПоперечкаРасширеннаяПодсказка" id="138"/>
+									<Events>
+										<Event name="OnChange">ПоперечкаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="УголЗарезки" id="139">
+									<DataPath>СправочникОбъект.УголЗарезки</DataPath>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="УголЗарезкиКонтекстноеМеню" id="140"/>
+									<ExtendedTooltip name="УголЗарезкиРасширеннаяПодсказка" id="141"/>
+									<Events>
+										<Event name="OnChange">УголЗарезкиПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ВидПокрытияКоробка" id="142">
+							<DataPath>СправочникОбъект.ВидПокрытия</DataPath>
+							<ContextMenu name="ВидПокрытияКоробкаКонтекстноеМеню" id="143"/>
+							<ExtendedTooltip name="ВидПокрытияКоробкаРасширеннаяПодсказка" id="144"/>
+							<Events>
+								<Event name="OnChange">ВидПокрытияКоробкаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ДекорКоробка" id="145">
+							<DataPath>СправочникОбъект.Декор</DataPath>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидПокрытия</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="ДекорКоробкаКонтекстноеМеню" id="146"/>
+							<ExtendedTooltip name="ДекорКоробкаРасширеннаяПодсказка" id="147"/>
+							<Events>
+								<Event name="OnChange">ДекорКоробкаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Комплектация" id="148">
+							<DataPath>СправочникОбъект.Комплектация</DataPath>
+							<ContextMenu name="КомплектацияКонтекстноеМеню" id="149"/>
+							<ExtendedTooltip name="КомплектацияРасширеннаяПодсказка" id="150"/>
+							<Events>
+								<Event name="OnChange">КомплектацияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаУплотнитель" id="157">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа уплотнитель</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа уплотнитель</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУплотнительРасширеннаяПодсказка" id="158"/>
+							<ChildItems>
+								<InputField name="Уплотнитель" id="151">
+									<DataPath>СправочникОбъект.Уплотнитель</DataPath>
+									<ContextMenu name="УплотнительКонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="УплотнительРасширеннаяПодсказка" id="153"/>
+									<Events>
+										<Event name="OnChange">УплотнительПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТолщинаДвери" id="154">
+									<DataPath>СправочникОбъект.ТолщинаДвери</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Толщина двери (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ТолщинаДвериКонтекстноеМеню" id="155"/>
+									<ExtendedTooltip name="ТолщинаДвериРасширеннаяПодсказка" id="156"/>
+									<Events>
+										<Event name="OnChange">ТолщинаДвериПриИзменении</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="Фрезеровка" id="159">
+									<DataPath>СправочникОбъект.Фрезеровка</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>CheckBox</CheckBoxType>
+									<ContextMenu name="ФрезеровкаКонтекстноеМеню" id="160"/>
+									<ExtendedTooltip name="ФрезеровкаРасширеннаяПодсказка" id="161"/>
+									<Events>
+										<Event name="OnChange">ФрезеровкаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="Направление" id="162">
+									<DataPath>СправочникОбъект.Направление</DataPath>
+									<ContextMenu name="НаправлениеКонтекстноеМеню" id="163"/>
+									<ExtendedTooltip name="НаправлениеРасширеннаяПодсказка" id="164"/>
+									<Events>
+										<Event name="OnChange">НаправлениеПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаГермитизацияКоробка" id="165">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа гермитизация коробка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа гермитизация коробка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаГермитизацияКоробкаРасширеннаяПодсказка" id="166"/>
+							<ChildItems>
+								<InputField name="Герметизация1" id="167">
+									<DataPath>СправочникОбъект.Герметизация</DataPath>
+									<ContextMenu name="Герметизация1КонтекстноеМеню" id="168"/>
+									<ExtendedTooltip name="Герметизация1РасширеннаяПодсказка" id="169"/>
+									<Events>
+										<Event name="OnChange">Герметизация1ПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВидУпаковки" id="170">
+									<DataPath>СправочникОбъект.ВидУпаковки</DataPath>
+									<ContextMenu name="ВидУпаковкиКонтекстноеМеню" id="171"/>
+									<ExtendedTooltip name="ВидУпаковкиРасширеннаяПодсказка" id="172"/>
+									<Events>
+										<Event name="OnChange">ВидУпаковкиПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<Pages name="СтраницаНаличники" id="173">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница наличники</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница наличники</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницаНаличникиРасширеннаяПодсказка" id="174"/>
+			<ChildItems>
+				<Page name="ГруппаПараметрыНаличники" id="175">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры наличники</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры наличники</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ГруппаПараметрыНаличникиРасширеннаяПодсказка" id="176"/>
+					<ChildItems>
+						<InputField name="ВидМатериалаНаличники" id="181">
+							<DataPath>СправочникОбъект.Видматериала</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид материала:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВидМатериалаНаличникиКонтекстноеМеню" id="182"/>
+							<ExtendedTooltip name="ВидМатериалаНаличникиРасширеннаяПодсказка" id="183"/>
+							<Events>
+								<Event name="OnChange">ВидМатериалаНаличникиПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаНестандартНаличники" id="177">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт наличники</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт наличники</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНестандартНаличникиРасширеннаяПодсказка" id="178"/>
+							<ChildItems>
+								<CheckBoxField name="НестандартНаличник" id="184">
+									<DataPath>СправочникОбъект.Нестандарт</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НестандартНаличникКонтекстноеМеню" id="185"/>
+									<ExtendedTooltip name="НестандартНаличникРасширеннаяПодсказка" id="186"/>
+									<Events>
+										<Event name="OnChange">НестандартНаличникПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ШиринаНаличиник" id="187">
+									<DataPath>СправочникОбъект.Ширина</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ширина (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ШиринаНаличиникКонтекстноеМеню" id="188"/>
+									<ExtendedTooltip name="ШиринаНаличиникРасширеннаяПодсказка" id="189"/>
+									<Events>
+										<Event name="OnChange">ШиринаНаличиникПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТолщинаНаличник" id="190">
+									<DataPath>СправочникОбъект.Толщина</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Толщина (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ТолщинаНаличникКонтекстноеМеню" id="191"/>
+									<ExtendedTooltip name="ТолщинаНаличникРасширеннаяПодсказка" id="192"/>
+									<Events>
+										<Event name="OnChange">ТолщинаНаличникПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВысотаНаличник" id="193">
+									<DataPath>СправочникОбъект.Высота</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Высота (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ВысотаНаличникКонтекстноеМеню" id="194"/>
+									<ExtendedTooltip name="ВысотаНаличникРасширеннаяПодсказка" id="195"/>
+									<Events>
+										<Event name="OnChange">ВысотаНаличникПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНестандартНаличники2" id="179">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт наличники2</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт наличники2</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНестандартНаличники2РасширеннаяПодсказка" id="180"/>
+							<ChildItems>
+								<InputField name="ДлинаНожки" id="196">
+									<DataPath>СправочникОбъект.Длина</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Длина ножки (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ДлинаНожкиКонтекстноеМеню" id="197"/>
+									<ExtendedTooltip name="ДлинаНожкиРасширеннаяПодсказка" id="198"/>
+									<Events>
+										<Event name="OnChange">ДлинаНожкиПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ПоперечкаНаличник" id="199">
+									<DataPath>СправочникОбъект.Поперечка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поперечка (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ПоперечкаНаличникКонтекстноеМеню" id="200"/>
+									<ExtendedTooltip name="ПоперечкаНаличникРасширеннаяПодсказка" id="201"/>
+									<Events>
+										<Event name="OnChange">ПоперечкаНаличникПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="УголЗарезкиНаличник" id="202">
+									<DataPath>СправочникОбъект.УголЗарезки</DataPath>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="УголЗарезкиНаличникКонтекстноеМеню" id="203"/>
+									<ExtendedTooltip name="УголЗарезкиНаличникРасширеннаяПодсказка" id="204"/>
+									<Events>
+										<Event name="OnChange">УголЗарезкиНаличникПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ВидПокрытияНаличники" id="205">
+							<DataPath>СправочникОбъект.ВидПокрытия</DataPath>
+							<ContextMenu name="ВидПокрытияНаличникиКонтекстноеМеню" id="206"/>
+							<ExtendedTooltip name="ВидПокрытияНаличникиРасширеннаяПодсказка" id="207"/>
+							<Events>
+								<Event name="OnChange">ВидПокрытияНаличникиПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ДекорНаличникик" id="208">
+							<DataPath>СправочникОбъект.Декор</DataPath>
+							<ContextMenu name="ДекорНаличникикКонтекстноеМеню" id="209"/>
+							<ExtendedTooltip name="ДекорНаличникикРасширеннаяПодсказка" id="210"/>
+							<Events>
+								<Event name="OnChange">ДекорНаличникикПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="КомплектацияНаличникик" id="211">
+							<DataPath>СправочникОбъект.Комплектация</DataPath>
+							<ContextMenu name="КомплектацияНаличникикКонтекстноеМеню" id="212"/>
+							<ExtendedTooltip name="КомплектацияНаличникикРасширеннаяПодсказка" id="213"/>
+							<Events>
+								<Event name="OnChange">КомплектацияНаличникикПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ГерметизацияНаличникик" id="214">
+							<DataPath>СправочникОбъект.Герметизация</DataPath>
+							<ContextMenu name="ГерметизацияНаличникикКонтекстноеМеню" id="215"/>
+							<ExtendedTooltip name="ГерметизацияНаличникикРасширеннаяПодсказка" id="216"/>
+							<Events>
+								<Event name="OnChange">ГерметизацияНаличникикПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ВидУпаковкиНаличникик" id="217">
+							<DataPath>СправочникОбъект.ВидУпаковки</DataPath>
+							<ContextMenu name="ВидУпаковкиНаличникикКонтекстноеМеню" id="218"/>
+							<ExtendedTooltip name="ВидУпаковкиНаличникикРасширеннаяПодсказка" id="219"/>
+							<Events>
+								<Event name="OnChange">ВидУпаковкиНаличникикПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<Pages name="СтраницаПланкаДробная" id="220">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница планка дробная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница планка дробная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницаПланкаДробнаяРасширеннаяПодсказка" id="221"/>
+			<ChildItems>
+				<Page name="ГруппаПараметрыПланкаДробная" id="227">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры планка дробная</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры планка дробная</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПараметрыПланкаДробнаяРасширеннаяПодсказка" id="228"/>
+					<ChildItems>
+						<InputField name="ВидматериалаПланкаДробная" id="224">
+							<DataPath>СправочникОбъект.Видматериала</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид материала</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВидматериалаПланкаДробнаяКонтекстноеМеню" id="225"/>
+							<ExtendedTooltip name="ВидматериалаПланкаДробнаяРасширеннаяПодсказка" id="226"/>
+							<Events>
+								<Event name="OnChange">ВидматериалаПланкаДробнаяПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаНестандартПланкаДробная" id="229">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт планка дробная</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт планка дробная</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНестандартПланкаДробнаяРасширеннаяПодсказка" id="230"/>
+							<ChildItems>
+								<CheckBoxField name="НестандартПланкаДробная" id="231">
+									<DataPath>СправочникОбъект.Нестандарт</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НестандартПланкаДробнаяКонтекстноеМеню" id="232"/>
+									<ExtendedTooltip name="НестандартПланкаДробнаяРасширеннаяПодсказка" id="233"/>
+									<Events>
+										<Event name="OnChange">НестандартПланкаДробнаяПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ШиринаПланкаДробная" id="234">
+									<DataPath>СправочникОбъект.Ширина</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ширина (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ШиринаПланкаДробнаяКонтекстноеМеню" id="235"/>
+									<ExtendedTooltip name="ШиринаПланкаДробнаяРасширеннаяПодсказка" id="236"/>
+									<Events>
+										<Event name="OnChange">ШиринаПланкаДробнаяПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТолщинаПланкаДробная" id="237">
+									<DataPath>СправочникОбъект.Толщина</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Толщина (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ТолщинаПланкаДробнаяКонтекстноеМеню" id="238"/>
+									<ExtendedTooltip name="ТолщинаПланкаДробнаяРасширеннаяПодсказка" id="239"/>
+									<Events>
+										<Event name="OnChange">ТолщинаПланкаДробнаяПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВысотаПланкаДробная" id="240">
+									<DataPath>СправочникОбъект.Высота</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Высота (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ВысотаПланкаДробнаяКонтекстноеМеню" id="241"/>
+									<ExtendedTooltip name="ВысотаПланкаДробнаяРасширеннаяПодсказка" id="242"/>
+									<Events>
+										<Event name="OnChange">ВысотаПланкаДробнаяПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ВидПокрытияПланкадробная" id="243">
+							<DataPath>СправочникОбъект.ВидПокрытия</DataPath>
+							<ContextMenu name="ВидПокрытияПланкадробнаяКонтекстноеМеню" id="244"/>
+							<ExtendedTooltip name="ВидПокрытияПланкадробнаяРасширеннаяПодсказка" id="245"/>
+							<Events>
+								<Event name="OnChange">ВидПокрытияПланкадробнаяПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ДекорПланкаДробная" id="246">
+							<DataPath>СправочникОбъект.Декор</DataPath>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидПокрытия</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="ДекорПланкаДробнаяКонтекстноеМеню" id="247"/>
+							<ExtendedTooltip name="ДекорПланкаДробнаяРасширеннаяПодсказка" id="248"/>
+							<Events>
+								<Event name="OnChange">ДекорПланкаДробнаяПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ВидУпаковкиПлакнаДробная" id="249">
+							<DataPath>СправочникОбъект.ВидУпаковки</DataPath>
+							<ContextMenu name="ВидУпаковкиПлакнаДробнаяКонтекстноеМеню" id="250"/>
+							<ExtendedTooltip name="ВидУпаковкиПлакнаДробнаяРасширеннаяПодсказка" id="251"/>
+							<Events>
+								<Event name="OnChange">ВидУпаковкиПлакнаДробнаяПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<Pages name="СтраницаПланкаПритворная" id="252">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница планка притворная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница планка притворная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницаПланкаПритворнаяРасширеннаяПодсказка" id="253"/>
+			<ChildItems>
+				<Page name="ГруппаПараметрыПланкаПритворная" id="254">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры планка притворная</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры планка притворная</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ГруппаПараметрыПланкаПритворнаяРасширеннаяПодсказка" id="255"/>
+					<ChildItems>
+						<InputField name="ВидМатериалаПланкаПритворная" id="258">
+							<DataPath>СправочникОбъект.Видматериала</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид материала:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВидМатериалаПланкаПритворнаяКонтекстноеМеню" id="259"/>
+							<ExtendedTooltip name="ВидМатериалаПланкаПритворнаяРасширеннаяПодсказка" id="260"/>
+							<Events>
+								<Event name="OnChange">ВидМатериалаПланкаПритворнаяПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаНестандартПланкаПритворная" id="256">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт планка притворная</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт планка притворная</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНестандартПланкаПритворнаяРасширеннаяПодсказка" id="257"/>
+							<ChildItems>
+								<CheckBoxField name="НестандартПланкаПритворная" id="261">
+									<DataPath>СправочникОбъект.Нестандарт</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НестандартПланкаПритворнаяКонтекстноеМеню" id="262"/>
+									<ExtendedTooltip name="НестандартПланкаПритворнаяРасширеннаяПодсказка" id="263"/>
+									<Events>
+										<Event name="OnChange">НестандартПланкаПритворнаяПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ШиринаПланкаПритворная" id="264">
+									<DataPath>СправочникОбъект.Ширина</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ширина (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ШиринаПланкаПритворнаяКонтекстноеМеню" id="265"/>
+									<ExtendedTooltip name="ШиринаПланкаПритворнаяРасширеннаяПодсказка" id="266"/>
+									<Events>
+										<Event name="OnChange">ШиринаПланкаПритворнаяПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТолщинаПланкаПритворная" id="267">
+									<DataPath>СправочникОбъект.Толщина</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Толщина (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ТолщинаПланкаПритворнаяКонтекстноеМеню" id="268"/>
+									<ExtendedTooltip name="ТолщинаПланкаПритворнаяРасширеннаяПодсказка" id="269"/>
+									<Events>
+										<Event name="OnChange">ТолщинаПланкаПритворнаяПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВысотаПланкаПритворная" id="270">
+									<DataPath>СправочникОбъект.Высота</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Высота (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ВысотаПланкаПритворнаяКонтекстноеМеню" id="271"/>
+									<ExtendedTooltip name="ВысотаПланкаПритворнаяРасширеннаяПодсказка" id="272"/>
+									<Events>
+										<Event name="OnChange">ВысотаПланкаПритворнаяПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ВидПокрытияПланкаПритворная" id="273">
+							<DataPath>СправочникОбъект.ВидПокрытия</DataPath>
+							<ContextMenu name="ВидПокрытияПланкаПритворнаяКонтекстноеМеню" id="274"/>
+							<ExtendedTooltip name="ВидПокрытияПланкаПритворнаяРасширеннаяПодсказка" id="275"/>
+							<Events>
+								<Event name="OnChange">ВидПокрытияПланкаПритворнаяПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ДекорПланкаПритворная" id="276">
+							<DataPath>СправочникОбъект.Декор</DataPath>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидПокрытия</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="ДекорПланкаПритворнаяКонтекстноеМеню" id="277"/>
+							<ExtendedTooltip name="ДекорПланкаПритворнаяРасширеннаяПодсказка" id="278"/>
+							<Events>
+								<Event name="OnChange">ДекорПланкаПритворнаяПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="КомплектацияПланкаПритворная" id="279">
+							<DataPath>СправочникОбъект.Комплектация</DataPath>
+							<ContextMenu name="КомплектацияПланкаПритворнаяКонтекстноеМеню" id="280"/>
+							<ExtendedTooltip name="КомплектацияПланкаПритворнаяРасширеннаяПодсказка" id="281"/>
+							<Events>
+								<Event name="OnChange">КомплектацияПланкаПритворнаяПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="УплотнительПланкаПритворная" id="282">
+							<DataPath>СправочникОбъект.Уплотнитель</DataPath>
+							<ContextMenu name="УплотнительПланкаПритворнаяКонтекстноеМеню" id="283"/>
+							<ExtendedTooltip name="УплотнительПланкаПритворнаяРасширеннаяПодсказка" id="284"/>
+							<Events>
+								<Event name="OnChange">УплотнительПланкаПритворнаяПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТолщинаДвериПланкаПритворная" id="285">
+							<DataPath>СправочникОбъект.ТолщинаДвери</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Толщина двери (мм)</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТолщинаДвериПланкаПритворнаяКонтекстноеМеню" id="286"/>
+							<ExtendedTooltip name="ТолщинаДвериПланкаПритворнаяРасширеннаяПодсказка" id="287"/>
+							<Events>
+								<Event name="OnChange">ТолщинаДвериПланкаПритворнаяПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<Pages name="СтраницаПлинтус" id="288">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница плинтус</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница плинтус</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницаПлинтусРасширеннаяПодсказка" id="289"/>
+			<ChildItems>
+				<Page name="ГруппаПараметрыПлинтус" id="290">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры плинтус</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры плинтус</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПараметрыПлинтусРасширеннаяПодсказка" id="291"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНестандартПлинтус" id="292">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт плинтус</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нестандарт плинтус</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНестандартПлинтусРасширеннаяПодсказка" id="293"/>
+							<ChildItems>
+								<CheckBoxField name="НестандартПлинтус" id="294">
+									<DataPath>СправочникОбъект.Нестандарт</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НестандартПлинтусКонтекстноеМеню" id="295"/>
+									<ExtendedTooltip name="НестандартПлинтусРасширеннаяПодсказка" id="296"/>
+									<Events>
+										<Event name="OnChange">НестандартПлинтусПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="Длина" id="297">
+									<DataPath>СправочникОбъект.Длина</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Длина (мм)</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидИзделия</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ДлинаКонтекстноеМеню" id="298"/>
+									<ExtendedTooltip name="ДлинаРасширеннаяПодсказка" id="299"/>
+									<Events>
+										<Event name="OnChange">ДлинаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ВидПокрытияПлинтус" id="300">
+							<DataPath>СправочникОбъект.ВидПокрытия</DataPath>
+							<ContextMenu name="ВидПокрытияПлинтусКонтекстноеМеню" id="301"/>
+							<ExtendedTooltip name="ВидПокрытияПлинтусРасширеннаяПодсказка" id="302"/>
+							<Events>
+								<Event name="OnChange">ВидПокрытияПлинтусПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ДекорПлинтус" id="303">
+							<DataPath>СправочникОбъект.Декор</DataPath>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">СправочникОбъект.ВидПокрытия</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="ДекорПлинтусКонтекстноеМеню" id="304"/>
+							<ExtendedTooltip name="ДекорПлинтусРасширеннаяПодсказка" id="305"/>
+							<Events>
+								<Event name="OnChange">ДекорПлинтусПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СправочникОбъект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочник объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogObject.Номенклатура</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Наименование" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьДанные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьДанные</Action>
+		</Command>
+	</Commands>
+</Form>

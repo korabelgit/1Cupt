@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Организация" id="31">
+			<DataPath>Объект.Организация</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="82"/>
+		</InputField>
+		<InputField name="Владелец" id="5">
+			<DataPath>Объект.Owner</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="83"/>
+			<Events>
+				<Event name="OnChange">ВладелецПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Родитель" id="7">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="84"/>
+		</InputField>
+		<UsualGroup name="КодНаименование" id="71">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код наименование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код наименование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КодНаименованиеРасширеннаяПодсказка" id="85"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="86"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="87"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВидДоговора" id="77">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа вид договора</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа вид договора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВидДоговораРасширеннаяПодсказка" id="88"/>
+			<ChildItems>
+				<InputField name="ВидДоговора" id="43">
+					<DataPath>Объект.ВидДоговора</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>false</ChoiceButton>
+					<ClearButton>false</ClearButton>
+					<OpenButton>false</OpenButton>
+					<TextEdit>false</TextEdit>
+					<ChoiceListButton>true</ChoiceListButton>
+					<ContextMenu name="ВидДоговораКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ВидДоговораРасширеннаяПодсказка" id="89"/>
+					<Events>
+						<Event name="OnChange">ВидДоговораПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ТипЦен" id="39">
+					<DataPath>Объект.ТипЦен</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ChoiceButton>true</ChoiceButton>
+					<ChooseType>false</ChooseType>
+					<ContextMenu name="ТипЦенКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ТипЦенРасширеннаяПодсказка" id="90"/>
+					<Events>
+						<Event name="Clearing">ТипЦенОчистка</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="НомерИДата" id="72">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер и дата</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер и дата</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НомерИДатаРасширеннаяПодсказка" id="91"/>
+			<ChildItems>
+				<InputField name="Номер" id="55">
+					<DataPath>Объект.Номер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="92"/>
+				</InputField>
+				<InputField name="Дата" id="53">
+					<DataPath>Объект.Дата</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="93"/>
+				</InputField>
+				<InputField name="СрокДействия" id="65">
+					<DataPath>Объект.СрокДействия</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СрокДействияКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="СрокДействияРасширеннаяПодсказка" id="94"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВедениеВзаиморасчетов" id="75">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ведение взаиморасчетов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ведение взаиморасчетов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="ГруппаВедениеВзаиморасчетовРасширеннаяПодсказка" id="95"/>
+			<ChildItems>
+				<InputField name="ВедениеВзаиморасчетов" id="11">
+					<DataPath>Объект.ВедениеВзаиморасчетов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Взаиморасчеты ведутся в УУ</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВедениеВзаиморасчетовКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ВедениеВзаиморасчетовРасширеннаяПодсказка" id="96"/>
+					<Events>
+						<Event name="OnChange">ВедениеВзаиморасчетовПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВедениеВзаиморасчетовРегл" id="78">
+					<DataPath>Объект.ВедениеВзаиморасчетовРегл</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>, в (БУ и НУ)</v8:content>
+						</v8:item>
+					</Title>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="ВедениеВзаиморасчетовРеглКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="ВедениеВзаиморасчетовРеглРасширеннаяПодсказка" id="97"/>
+				</InputField>
+				<InputField name="ВалютаВзаиморасчетов" id="9">
+					<DataPath>Объект.ВалютаВзаиморасчетов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВалютаВзаиморасчетовКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ВалютаВзаиморасчетовРасширеннаяПодсказка" id="98"/>
+					<Events>
+						<Event name="OnChange">ВалютаВзаиморасчетовПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРасчетыВУЕ" id="76">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа расчеты ВУЕ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа расчеты ВУЕ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРасчетыВУЕРасширеннаяПодсказка" id="99"/>
+			<ChildItems>
+				<CheckBoxField name="РеализацияНаЭкспорт" id="57">
+					<DataPath>Объект.РеализацияНаЭкспорт</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РеализацияНаЭкспортКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="РеализацияНаЭкспортРасширеннаяПодсказка" id="100"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ВестиПоДокументамРасчетовСКонтрагентом" id="59">
+			<DataPath>Объект.ВестиПоДокументамРасчетовСКонтрагентом</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По документам расчетов с контрагентами</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВестиПоДокументамРасчетовСКонтрагентомКонтекстноеМеню" id="60"/>
+			<ExtendedTooltip name="ВестиПоДокументамРасчетовСКонтрагентомРасширеннаяПодсказка" id="101"/>
+		</CheckBoxField>
+		<CheckBoxField name="НеОтноситьНаЗатратыПоНУ" id="80">
+			<DataPath>Объект.НеОтноситьНаЗатратыПоНУ</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НеОтноситьНаЗатратыПоНУКонтекстноеМеню" id="81"/>
+			<ExtendedTooltip name="НеОтноситьНаЗатратыПоНУРасширеннаяПодсказка" id="102"/>
+		</CheckBoxField>
+		<InputField name="Комментарий" id="23">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="103"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ДоговорыКонтрагентов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВалютаРегламентированногоУчета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта регламентированного учета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокВыбораВидаДоговора" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список выбора вида договора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидДоговораСПоставщиком" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид договора с поставщиком</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыДоговоровКонтрагентов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидДоговораСПокупателем" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид договора с покупателем</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыДоговоровКонтрагентов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидДоговораПрочее" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид договора прочее</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыДоговоровКонтрагентов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидДоговораСКомиссионером" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид договора с комиссионером</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыДоговоровКонтрагентов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидДоговораСКомитентом" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид договора с комитентом</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыДоговоровКонтрагентов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВедениеВзаиморасчетовПоДоговоруВЦелом" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ведение взаиморасчетов по договору в целом</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВедениеВзаиморасчетовПоДоговорам</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>
